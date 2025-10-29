@@ -12,14 +12,14 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-20 border-b border-titan-border bg-titan-bg/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center gap-4 px-6 py-3 text-sm text-titan-text-muted">
-        <Link className="hover:text-titan-yellow" href="/">About us</Link>
-        <Link href="/specifications" className="hover:text-titan-yellow">Specifications</Link>
+      <div className="mx-auto flex max-w-6xl items-center gap-5 px-8 py-3 text-base text-titan-text-muted">
+        <Link className="font-medium hover:text-titan-yellow" href="/">About us</Link>
+        <Link href="/specifications" className="font-medium hover:text-titan-yellow">Specifications</Link>
         {session?.user && (
           <>
-            <Link href="/dashboard" className="hover:text-titan-yellow">Dashboard</Link>
+            <Link href="/dashboard" className="font-medium hover:text-titan-yellow">Dashboard</Link>
             <form action="/api/auth/signout" method="post">
-              <button className="hover:text-titan-orange" type="submit">Sign out</button>
+              <button className="font-medium hover:text-titan-orange" type="submit">Sign out</button>
             </form>
           </>
         )}

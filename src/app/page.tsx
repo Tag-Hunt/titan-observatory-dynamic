@@ -1,4 +1,5 @@
 import Image from "next/image";
+import GofundmeEmbed from "@/components/GofundmeEmbed";
 
 const fundingHighlights = [
   "Secure the 10-meter NASA-built radio telescope and finalize relocation.",
@@ -51,7 +52,7 @@ const phases = [
 export default function Home() {
   return (
     <main className="space-y-16">
-      <section className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+      <section className="grid items-center gap-14 lg:grid-cols-[1.25fr_0.95fr] xl:grid-cols-[1.2fr_0.8fr]">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold text-titan-text-secondary">
             About Titan Astronomical Observatory
@@ -68,19 +69,19 @@ export default function Home() {
             becomes the remote lab we wished we had growing up.
           </p>
         </div>
-        <figure className="relative h-72 overflow-hidden rounded-3xl border border-titan-border/70 bg-titan-bg-alt/50 shadow-titan">
+        <figure className="relative w-full overflow-hidden rounded-[2rem] border border-titan-border/70 bg-titan-bg-alt/50 shadow-titan aspect-[3/4]">
           <Image
             src="/images/titan.png"
             alt="The Titan radio telescope awaiting modernization."
             fill
-            className="object-cover"
+            className="object-cover object-center"
             sizes="(min-width: 1024px) 420px, 60vw"
             priority
           />
         </figure>
       </section>
 
-      <section className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="grid gap-16 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="space-y-5">
           <h2 className="text-2xl font-semibold text-titan-text-secondary">Why It Matters</h2>
           <p className="text-sm leading-relaxed text-titan-text-primary/90">
@@ -114,7 +115,7 @@ export default function Home() {
         </aside>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-8">
         <div className="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between">
           <div>
             <h2 className="text-2xl font-semibold text-titan-text-secondary">Roadmap to First Light</h2>
@@ -126,7 +127,7 @@ export default function Home() {
             Working total ~ $118,000
           </span>
         </div>
-        <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-12 lg:grid-cols-2 xl:grid-cols-4">
           {phases.map(phase => (
             <article
               key={phase.title}
@@ -149,7 +150,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="rounded-3xl border-l-4 border-titan-green/70 bg-transparent p-8 text-sm leading-relaxed text-titan-text-primary/90">
+      <section className="rounded-3xl border-l-4 border-titan-green/70 bg-transparent p-10 text-sm leading-relaxed text-titan-text-primary/90">
         <h2 className="text-2xl font-semibold text-titan-text-secondary">Get Involved</h2>
         <p className="mt-3 max-w-4xl">
           We are assembling donors, engineers, educators, and storytellers to bring Titan online.
@@ -157,6 +158,9 @@ export default function Home() {
           prep, or software. Together we can deliver real NASA-grade data packages to the next
           generation of scientists and makers.
         </p>
+        <div className="mt-6">
+          <GofundmeEmbed />
+        </div>
       </section>
     </main>
   );
