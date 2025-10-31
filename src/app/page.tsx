@@ -1,14 +1,15 @@
 import Image from "next/image";
 import GofundmeEmbed from "@/components/GofundmeEmbed";
+import PhaseTimeline from "@/components/PhaseTimeline";
 
 export const revalidate = 3600;
 
 const fundingHighlights = [
-  "Secure the 10-meter NASA-built radio telescope and finalize relocation.",
-  "Install a new foundation, electrical service, and lightning protection at the Florida site.",
-  "Upgrade motion control, encoders, and feeds for modern remote operation.",
-  "Bring the site online with hardened networking, scheduling, and data delivery tools.",
-  "Cover permits, insurance, and RFI baselining so student data starts clean.",
+  "Lock in the purchase and move the 10-meter NASA-built radio telescope to its new home.",
+  "Pour the pier, run power, and ground the site so the dish can pivot safely in Florida weather.",
+  "Swap the vintage motion control and feeds for modern encoders, drives, and front ends.",
+  "Stand up the network, scheduling tools, and data pipeline classrooms will use every day.",
+  "Handle permits, insurance, and radio-quiet validation so the first datasets arrive clean.",
 ];
 
 const phases = [
@@ -60,14 +61,18 @@ export default function Home() {
             About Titan Astronomical Observatory
           </h1>
           <p className="text-lg leading-relaxed text-titan-text-primary/90">
-            Titan Astronomical Observatory (TAO) is a Florida nonprofit on a mission to reopen a
-            NASA-built 10-meter radio telescope for students, teachers, and lifelong explorers. The
-            team has secured an option on the instrument, a site to host it, and the roadmap to
-            modernize every subsystem so classrooms anywhere can run real observations.
+            We&apos;re Titan Astronomical Observatory, a small Florida nonprofit with the goal of 
+            providing remote access to real NASA quality instruments and real data 
+            for students, teachers, and enthusiasts. We’re an officially incorporated 
+            nonprofit (501(c)(3) pending) with a four-member board, a potential site secured, 
+            an option contract granting us the exclusive right to buy the telescope, and a 
+            core team planning for the future.
+
           </p>
           <p className="text-sm leading-relaxed text-titan-text-muted">
-            The option contract is active, the relocation crew is ready, and each contribution keeps
-            the schedule tight so classrooms can start booking observing time sooner.
+            The dish itself is a 10-meter Scientific-Atlanta Cassegrain on a Antlab precision positioner the current owner purchased from
+            NASA nearly 50 years ago. It's been maticulusly maintained, with zero backlash, perfect balance, and a 
+            dehumidifier running inside 24/7.
           </p>
           <div className="max-w-[420px]">
             <GofundmeEmbed />
@@ -89,10 +94,9 @@ export default function Home() {
         <div className="space-y-5">
           <h2 className="text-2xl font-semibold text-titan-text-secondary">Why It Matters</h2>
           <p className="text-sm leading-relaxed text-titan-text-primary/90">
-            Hands-on science changes lives. Titan gives classrooms and independent researchers the
-            ability to schedule time, capture calibrated data, and publish discoveries without owning
-            an observatory. Students get NASA-grade hardware, open schedules, and mentorship without
-            the barrier of a graduate lab.
+            Hands-on science changes lives. Titan lets classrooms, home learners, and clubs reserve
+            observing time, collect calibrated data, and build projects they can publish or share with
+            their communities.
           </p>
           <ul className="grid gap-3 sm:grid-cols-2">
             {fundingHighlights.map(item => (
@@ -108,60 +112,46 @@ export default function Home() {
         </div>
         <aside className="space-y-3 rounded-3xl border-l-4 border-titan-purple/60 bg-transparent p-6 text-sm leading-relaxed text-titan-text-primary/90">
           <h3 className="text-base font-semibold text-titan-text-secondary">What Support Enables</h3>
-          <p>
-            Gifts and volunteer talent push us from raw hardware to a modern, automated facility:
-          </p>
+          <p>Gifts and volunteer time help us turn a historic instrument into a shared classroom:</p>
           <ul className="space-y-2">
-            <li>- Remote go-to controls, safety interlocks, and adaptive pointing models</li>
-            <li>- New RF front ends and calibrated signal chains for L-band and S-band work</li>
-            <li>- Hardened network, scheduling software, and a student-friendly data portal</li>
+            <li>- Remote go-to controls, safety interlocks, and smarter pointing models</li>
+            <li>- Fresh RF chains and calibrated feeds for the bands students want to explore</li>
+            <li>- Hardened networking, scheduling tools, and a data portal built for teaching</li>
           </ul>
         </aside>
       </section>
 
-      <section className="space-y-8">
+      <section className="space-y-10">
         <div className="flex flex-col gap-3 md:flex-row md:items-baseline md:justify-between">
           <div>
             <h2 className="text-2xl font-semibold text-titan-text-secondary">Roadmap to First Light</h2>
             <p className="text-sm text-titan-text-muted">
-              Four focused phases carry Titan from acquisition to student-ready operations.
+              Four focused phases carry Titan from a Facebook Marketplace listing to student-ready operations.
             </p>
           </div>
           <span className="rounded-full border border-titan-border/60 px-4 py-1 text-xs uppercase tracking-widest text-titan-text-muted">
             Working total ~ $118,000
           </span>
         </div>
-        <div className="grid gap-12 lg:grid-cols-2 xl:grid-cols-4">
-          {phases.map(phase => (
-            <article
-              key={phase.title}
-              className="relative flex flex-col gap-3 border-l-2 border-titan-border/60 pl-6"
-            >
-              <span className="absolute -left-2 top-1.5 h-3 w-3 rounded-full border border-titan-border/40 bg-titan-orange/70" />
-              <header>
-                <h3 className="text-lg font-semibold text-titan-text-secondary">{phase.title}</h3>
-                <p className="text-xs uppercase tracking-wider text-titan-text-muted">
-                  Status: {phase.status}
-                </p>
-              </header>
-              <ul className="space-y-2 text-sm leading-relaxed text-titan-text-primary/90">
-                {phase.details.map(detail => (
-                  <li key={detail}>{detail}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
+
+        <PhaseTimeline phases={phases} />
       </section>
 
       <section className="rounded-3xl border-l-4 border-titan-green/70 bg-transparent p-10 text-sm leading-relaxed text-titan-text-primary/90">
         <h2 className="text-2xl font-semibold text-titan-text-secondary">Get Involved</h2>
         <p className="mt-3 max-w-4xl">
-          We are assembling donors, engineers, educators, and storytellers to bring Titan online.
-          Join the Discord community, sponsor a line item, or lend expertise in controls, RF, site
-          prep, or software. Together we can deliver real NASA-grade data packages to the next
-          generation of scientists and makers.
+          We&apos;re looking for donors, engineers, educators, storytellers, and radio nerds who want to
+          help. Hop into the Discord, claim a line item, or lend expertise with controls, RF chains,
+          site work, or software. Together we can hand the next wave of explorers real NASA-quality data.
         </p>
+        <a
+          href="https://discord.gg/T5F6AG26tE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-titan-purple/60 bg-titan-purple/20 px-6 py-2.5 text-sm font-semibold text-titan-purple transition hover:bg-titan-purple/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-purple"
+        >
+          Join the Discord
+        </a>
       </section>
     </main>
   );

@@ -6,38 +6,33 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Telescope & Site Specifications | Titan Observatory",
   description:
-    "Hardware capabilities of the Titan radio telescope and a snapshot of the candidate site that will host it.",
+    "A closer look at Titan's 10-meter NASA-built radio telescope and the Florida site that will host it.",
 };
-
-const mechanicalHighlights = [
-  "We're acquiring and modernizing a 10-meter Scientific-Atlanta Cassegrain radio telescope on a precision ANTLab positioner.",
-  "It's ex-NASA hardware with a continuously-run dehumidifier inside the mount, so the internals remain clean and in excellent shape.",
-];
 
 const keyFacts = [
   {
     label: "Aperture",
-    value: "10 m Cassegrain provides ample collecting area for faint lines like the 1420.4 MHz H I transition.",
+    value: "10 m Cassegrain surface gathers plenty of signal for faint 1420.4 MHz hydrogen work.",
   },
   {
     label: "Drives",
-    value: "Dual precision gear trains with dual DC motors and electronic brakes; balanced enough to move by hand (brakes off).",
+    value: "Dual gear trains, dual DC motors, and electronic brakes—balanced enough to nudge by hand.",
   },
   {
     label: "Speed & Range",
-    value: "Variable slew 0–10°/s; elevation 0–95°; azimuth 360°+ with managed wire wrap.",
+    value: "Variable slews from 0–10°/s, elevation 0–95°, azimuth 360°+ with managed wrap.",
   },
   {
     label: "Control",
-    value: "Currently manual with analog feedback; we’ll add encoders and computer control for repeatable remote pointing.",
+    value: "Analog feedback today; we’re adding encoders and computer control for reliable remote pointing.",
   },
   {
     label: "Power",
-    value: "Dual 48 VDC supplies with modest 120 V, ~20 A site draw.",
+    value: "Twin 48 VDC supplies plus a modest 120 V, ~20 A site draw.",
   },
   {
     label: "Footprint & Fixtures",
-    value: "Compact ~8 ft circular pier footprint with bolt-pattern template, plus spare gearboxes and a rack-mount analog position indicator.",
+    value: "Compact ~8 ft circular pier footprint, bolt template, spare gearboxes, and a rack-mount analog readout.",
   },
 ];
 
@@ -60,24 +55,24 @@ const candidateSections = [
   {
     title: "Approach & Access",
     copy: [
-      "A county-maintained road leads directly to the gate, and the planned service drive provides a straight shot to the pier. The approach stays flat, making it easy for delivery trucks, cranes, and school groups to reach the site.",
-      "Standing along the frontage you can see the clear horizon that surrounds the parcel, with plenty of staging space for rigging crews during installation.",
+      "A county road runs right to the gate, and the planned service drive gives the crane and transport crew a straight shot to the pier location.",
+      "From the frontage you can see open horizon in every direction plus plenty of staging room for the lift team once the dish arrives.",
     ],
     image: { src: "/images/zoning-from-road.png", alt: "Roadside view of the proposed observatory entrance." },
   },
   {
     title: "Parcel Layout & Zoning",
     copy: [
-      "Agricultural zoning keeps permitting straightforward while granting us the flexibility to add a control shelter and student work areas. The parcel grid highlights the proposed pad location and the open fields kept clear for the 10 m dish.",
-      "The bolt pattern template drops neatly into the planned foundation, leaving breathing room for conduit runs and future expansion.",
+      "Agricultural zoning keeps permitting simple. The parcel grid shows where the pier will sit and the buffer we’re keeping clear around the dish.",
+      "The pier bolt pattern drops neatly onto the planned slab, leaving room for conduit runs now and future upgrades later.",
     ],
     image: { src: "/images/zoning-grid.png", alt: "Parcel grid map showing the proposed pier and access drive." },
   },
   {
     title: "Radio Environment",
     copy: [
-      "A survey of the surrounding land use shows pasture and groves in every direction, keeping broadband interference low for L- and S-band observations.",
-      "The broader circle remains free of heavy industry or transmission corridors, so we retain the quiet radio window that classrooms need for meaningful spectroscopy.",
+      "Pasture and groves surround the parcel, which keeps broadband noise low for the L- and S-band work we have planned.",
+      "Zooming out, there’s still no heavy industry or major transmitters, so we hold onto the radio-quiet window classrooms need for clean spectra.",
     ],
     image: { src: "/images/zoning-circle.png", alt: "Land-use buffer illustrating the radio-quiet surroundings." },
   },
@@ -91,20 +86,11 @@ export default function SpecificationsPage() {
           <header className="space-y-3">
             <h1 className="text-4xl font-bold text-titan-text-secondary">Titan Telescope Overview</h1>
             <p className="text-sm leading-relaxed text-titan-text-primary/90">
-              The Titan dish is a Scientific-Atlanta 10-meter Cassegrain on a precision ANTLab positioner. It still
-              tracks smoothly thanks to its NASA-era maintenance, giving us a strong foundation for the modern
-              control system we’re adding.
+              The Titan dish is a 10-meter Scientific-Atlanta Cassegrain on an ANTLab positioner that once lived in
+              NASA’s network. Decades of careful maintenance kept the mechanics tight, which means we can focus on
+              modern controls and data systems instead of rebuilding the hardware from scratch.
             </p>
           </header>
-
-          <ul className="space-y-3 text-sm leading-relaxed text-titan-text-primary/90">
-            {mechanicalHighlights.map(item => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-titan-orange/70" />
-                {item}
-              </li>
-            ))}
-          </ul>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {keyFacts.map(fact => (
@@ -155,7 +141,7 @@ export default function SpecificationsPage() {
         <header className="space-y-3">
           <h2 className="text-3xl font-semibold text-titan-text-secondary">Candidate Site Overview</h2>
           <p className="text-sm leading-relaxed text-titan-text-primary/90">
-            The proposed site keeps Titan close to classrooms while preserving a radio-quiet horizon. Each diagram
+            The proposed site keeps Titan close to infrastructure while preserving a radio-quiet horizon. Each diagram
             and photo below shows how the approach, zoning, and surrounding land support the observatory plan.
           </p>
         </header>

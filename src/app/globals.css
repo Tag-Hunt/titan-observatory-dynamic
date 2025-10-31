@@ -5,22 +5,22 @@
 html, body, :root { height: 100%; }
 
 :root {
-  --color-bg: 27 27 27;
-  --color-bg-alt: 40 40 40;
-  --color-surface: 50 48 47;
-  --color-surface-hover: 60 56 54;
-  --color-border: 80 73 69;
-  --color-status-line: 58 55 53;
-  --color-text-primary: 212 190 152;
-  --color-text-secondary: 221 199 161;
-  --color-text-muted: 146 131 116;
-  --color-red: 234 105 98;
-  --color-green: 169 182 101;
-  --color-blue: 125 174 163;
-  --color-yellow: 216 166 87;
-  --color-purple: 211 134 155;
-  --color-orange: 231 138 78;
-  --color-aqua: 137 180 130;
+  --color-bg: 10 12 18;
+  --color-bg-alt: 18 23 35;
+  --color-surface: 26 32 52;
+  --color-surface-hover: 36 44 66;
+  --color-border: 58 72 104;
+  --color-status-line: 44 58 88;
+  --color-text-primary: 222 231 252;
+  --color-text-secondary: 244 248 255;
+  --color-text-muted: 172 184 214;
+  --color-red: 255 99 132;
+  --color-green: 110 204 172;
+  --color-blue: 88 160 255;
+  --color-yellow: 248 196 92;
+  --color-purple: 156 134 255;
+  --color-orange: 255 150 102;
+  --color-aqua: 102 212 232;
 }
 
 :root[data-theme="sunrise"] {

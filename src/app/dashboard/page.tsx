@@ -1,9 +1,11 @@
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+
 import DashboardForm from "@/components/DashboardForm";
+import { authOptions } from "@/lib/auth";
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
+
   if (!session) {
     return (
       <main className="titan-section space-y-4 p-8">
@@ -11,6 +13,15 @@ export default async function Dashboard() {
       </main>
     );
   }
+
+  if (!session.user?.isAdmin) {
+    return (
+      <main className="titan-section space-y-4 p-8">
+        <h1 className="text-2xl font-semibold">You do not have permission to view this page.</h1>
+      </main>
+    );
+  }
+
   return (
     <main className="space-y-6">
       <div className="titan-section p-8">

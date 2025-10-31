@@ -5,6 +5,8 @@ import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import SiteHeader from "@/components/SiteHeader";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,7 +19,7 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-titan-bg text-titan-text-primary">
+      <body className="relative min-h-screen bg-titan-bg text-titan-text-primary">
         {GA_MEASUREMENT_ID ? (
           <>
             <Script
@@ -40,9 +42,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Suspense>
           </>
         ) : null}
-        <SiteHeader />
-        <Navbar />
-        <div className="max-w-6xl mx-auto px-8 py-12">{children}</div>
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+          <StarsBackground className="pointer-events-none" />
+          <ShootingStars className="pointer-events-none" />
+        </div>
+        <div className="relative z-10 flex min-h-screen flex-col">
+          <SiteHeader />
+          <Navbar />
+          <main className="max-w-6xl flex-1 px-8 py-12 mx-auto">{children}</main>
+        </div>
       </body>
     </html>
   );

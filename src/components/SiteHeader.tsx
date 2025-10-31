@@ -12,7 +12,7 @@ export default function SiteHeader() {
           Titan Astronomical Observatory
         </h1>
         <p className="max-w-2xl text-sm text-white/80">
-          Remote NASA-grade radio astronomy for students, teachers, and curious explorers.
+          Opening a NASA-built radio telescope so classrooms, clubs, and curious makers can run real experiments.
         </p>
       </div>
     </header>
