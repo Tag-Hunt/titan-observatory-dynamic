@@ -98,7 +98,7 @@ export default function Home() {
         <div className="space-y-5">
           <h2 className="text-2xl font-semibold text-titan-text-secondary">Why It Matters</h2>
           <p className="text-sm leading-relaxed text-titan-text-primary/90">
-            Hands-on science changes lives. Titan lets classrooms, home learners, and clubs reserve
+            Hands-on science is one of the greatest ways to learn, and what better way to learn than with real NASA hardware! Titan lets classrooms, citizen scientists, and clubs reserve
             observing time, collect calibrated data, and build projects they can publish or share with
             their communities.
           </p>
@@ -110,6 +110,55 @@ export default function Home() {
             <li>- Remote go-to controls, safety interlocks, and smarter pointing models</li>
             <li>- Fresh RF chains and calibrated feeds for the bands students want to explore</li>
             <li>- Hardened networking, scheduling tools, and a data portal built for teaching</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section className="grid gap-12 rounded-3xl border border-titan-border/60 bg-titan-bg-alt/80 p-8 shadow-[0_22px_48px_-36px_rgba(10,15,35,0.9)] backdrop-blur-md md:grid-cols-[2fr_1fr] md:items-start">
+        <div className="space-y-5">
+          <h2 className="text-2xl font-semibold text-titan-text-secondary">Get involved!</h2>
+          <p className="text-sm leading-relaxed text-titan-text-primary/90">
+            If this is something you'd like to become a part of, apply to volunteer! Building a remote radio observatory is no small task, and requires a wide range of skillsets, so you dont have to be a radio astronomer or a master programmer to contribute. 
+          </p>
+          <p className="text-sm leading-relaxed text-titan-text-primary/90">
+            If you're just looking to learn more about radio astronomy, head over to our community forum or join our discord! We have 400+ community members with places to ask questions and hang out with the community.
+          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="https://forms.gle/MwwsctzD1G5woQAo6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-titan-blue/60 bg-titan-blue/20 px-6 py-2.5 text-sm font-semibold text-titan-blue transition hover:bg-titan-blue/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-blue"
+            >
+              Apply to Volunteer
+            </a>
+            <a
+              href="https://community.titanobservatory.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-titan-purple/50 bg-titan-purple/15 px-6 py-2.5 text-sm font-semibold text-titan-purple transition hover:bg-titan-purple/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-purple"
+            >
+              Visit the Forum
+            </a>
+            <a
+              href="https://discord.gg/T5F6AG26tE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-titan-green/60 bg-titan-green/15 px-6 py-2.5 text-sm font-semibold text-titan-green transition hover:bg-titan-green/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-green"
+            >
+              Join the Discord
+            </a>
+          </div>
+        </div>
+        <aside className="space-y-4 text-sm leading-relaxed text-titan-text-primary/90">
+          <h3 className="text-base font-semibold text-titan-text-secondary">Helpful skills</h3>
+          <p className="text-sm leading-relaxed text-titan-text-primary/90">Be aware we may not need some of these until later stages of the project, so while you wait, check out the forum!</p>
+          <ul className="space-y-2">
+            <li>- RF/HAM</li>
+            <li>- Signal Chain (LNAs, SDR, Feeds, etc.)</li>
+            <li>- Signal Processing/Calibration</li>
+            <li>- Administration (Finance, Community Management, etc.)</li>
+            <li>- Educational Writer</li>
           </ul>
         </aside>
       </section>
@@ -130,22 +179,6 @@ export default function Home() {
         <PhaseTimeline phases={phases} />
       </section>
 
-      <section className="rounded-3xl border-l-4 border-titan-green/70 bg-transparent p-10 text-sm leading-relaxed text-titan-text-primary/90">
-        <h2 className="text-2xl font-semibold text-titan-text-secondary">Get Involved</h2>
-        <p className="mt-3 max-w-4xl">
-          We&apos;re looking for donors, engineers, educators, storytellers, and radio nerds who want to
-          help. Hop into the Discord, claim a line item, or lend expertise with controls, RF chains,
-          site work, or software. Together we can hand the next wave of explorers real NASA-quality data.
-        </p>
-        <a
-          href="https://discord.gg/T5F6AG26tE"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-titan-purple/60 bg-titan-purple/20 px-6 py-2.5 text-sm font-semibold text-titan-purple transition hover:bg-titan-purple/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-purple"
-        >
-          Join the Discord
-        </a>
-      </section>
     </main>
   );
 }
