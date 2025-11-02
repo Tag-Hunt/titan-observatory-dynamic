@@ -97,25 +97,25 @@ export default function Navbar() {
       );
     }
 
-    const discordButton = (
+    const communityButton = (
       <NavbarButton
-        key="discord"
-        href="https://discord.gg/T5F6AG26tE"
+        key="forum"
+        href="https://community.titanobservatory.org"
         variant={context === "desktop" ? "primary" : "gradient"}
         className={buttonClass}
         onClick={handleClick}
         target="_blank"
         rel="noopener noreferrer"
       >
-        Join the Discord
+        Visit the Forum
       </NavbarButton>
     );
 
     if (context === "mobile") {
-      return <div className="flex w-full flex-col gap-3">{discordButton}</div>;
+      return <div className="flex w-full flex-col gap-3">{communityButton}</div>;
     }
 
-    return discordButton;
+    return communityButton;
   };
 
   return (
