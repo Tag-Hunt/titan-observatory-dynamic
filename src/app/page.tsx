@@ -96,21 +96,24 @@ export default function Home() {
 
       <section className="grid gap-16 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="space-y-5">
-          <h2 className="text-2xl font-semibold text-titan-text-secondary">Why It Matters</h2>
+          <h2 className="text-2xl font-semibold text-titan-text-secondary">What Support Enables</h2>
           <p className="text-sm leading-relaxed text-titan-text-primary/90">
+            Donations and volunteer time help us save this precision scientific instrument and make it accessible by anyone:
+          </p>
+          <ul className="space-y-2 text-sm leading-relaxed text-titan-text-primary/90">
+            <li>- Remote operation including a web portal, flexible controls, and data visualizations</li>
+            <li>- High quality RF chains and calibrated feeds for bands of interest</li>
+            <li>- Local hosting for all services (except backups) to maximize availability</li>
+            <li>- Ducumentation and guides to allow anyone to learn on real equipment</li>
+          </ul>
+        </div>
+        <aside className="space-y-3 rounded-3xl border-l-4 border-titan-purple/60 bg-transparent p-6 text-sm leading-relaxed text-titan-text-primary/90">
+          <h3 className="text-base font-semibold text-titan-text-secondary">Why It Matters</h3>
+          <p>
             Hands-on science is one of the greatest ways to learn, and what better way to learn than with real NASA hardware! Titan lets classrooms, citizen scientists, and clubs reserve
             observing time, collect calibrated data, and build projects they can publish or share with
             their communities.
           </p>
-        </div>
-        <aside className="space-y-3 rounded-3xl border-l-4 border-titan-purple/60 bg-transparent p-6 text-sm leading-relaxed text-titan-text-primary/90">
-          <h3 className="text-base font-semibold text-titan-text-secondary">What Support Enables</h3>
-          <p>Gifts and volunteer time help us turn a historic instrument into a shared classroom:</p>
-          <ul className="space-y-2">
-            <li>- Remote go-to controls, safety interlocks, and smarter pointing models</li>
-            <li>- Fresh RF chains and calibrated feeds for the bands students want to explore</li>
-            <li>- Hardened networking, scheduling tools, and a data portal built for teaching</li>
-          </ul>
         </aside>
       </section>
 
