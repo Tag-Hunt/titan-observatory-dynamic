@@ -60,7 +60,7 @@ export default function Footer() {
             <p>
               Contact:&nbsp;
               <a
-                className="text-titan-text-primary hover:text-white"
+                className="text-titan-text-primary hover:text-[#d4dcff]"
                 href="mailto:contact@titanobservatory.org"
               >
                 contact@titanobservatory.org
@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map(link => (
                 <li key={link.href}>
-                  <Link className="hover:text-white" href={link.href}>
+                  <Link className="hover:text-[#d4dcff]" href={link.href}>
                     {link.label}
                   </Link>
                 </li>
@@ -93,7 +93,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {communityLinks.map(link => (
                 <li key={link.href}>
-                  <a className="hover:text-white" href={link.href} target="_blank" rel="noreferrer">
+                  <a className="hover:text-[#d4dcff]" href={link.href} target="_blank" rel="noreferrer">
                     {link.label}
                   </a>
                 </li>
@@ -150,14 +150,14 @@ export default function Footer() {
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-6 text-xs text-titan-text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
           <p>&copy; {new Date().getFullYear()} Titan Observatory. All rights reserved.</p>
           <p className="flex flex-wrap justify-center gap-4 md:justify-end">
-            <Link className="hover:text-white" href="/terms">
+            <Link className="hover:text-[#d4dcff]" href="/terms">
               Terms
             </Link>
-            <Link className="hover:text-white" href="/privacy">
+            <Link className="hover:text-[#d4dcff]" href="/privacy">
               Privacy
             </Link>
             <a
-              className="hover:text-white"
+              className="hover:text-[#d4dcff]"
               href="https://community.titanobservatory.org/c/announcements"
               target="_blank"
               rel="noreferrer"
