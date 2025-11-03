@@ -7,6 +7,7 @@ import SiteHeader from "@/components/SiteHeader";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SiteHeader />
           <Navbar />
           <main className="max-w-6xl flex-1 px-8 py-12 mx-auto">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

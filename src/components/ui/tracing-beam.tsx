@@ -1,12 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import {
-  motion,
-  useTransform,
-  useScroll,
-  useVelocity,
-  useSpring,
-} from "motion/react";
+import { motion, useTransform, useScroll, useSpring } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export const TracingBeam = ({
@@ -19,16 +13,36 @@ export const TracingBeam = ({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.4", "end .6"],
+    offset: ["start 0.3", "end .2"],
   });
 
   const contentRef = useRef<HTMLDivElement>(null);
   const [svgHeight, setSvgHeight] = useState(0);
 
   useEffect(() => {
-    if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight);
+    if (typeof window === "undefined") return undefined;
+    const element = contentRef.current;
+    if (!element) return undefined;
+
+    const updateHeight = () => {
+      setSvgHeight(element.offsetHeight);
+    };
+
+    updateHeight();
+
+    if (typeof ResizeObserver !== "undefined") {
+      const observer = new ResizeObserver(() => {
+        updateHeight();
+      });
+      observer.observe(element);
+      return () => observer.disconnect();
     }
+
+    window.addEventListener("resize", updateHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
   }, []);
 
   const effectiveHeight = Math.max(svgHeight, 260);
@@ -40,8 +54,9 @@ export const TracingBeam = ({
       damping: 88,
     },
   );
+
   const y2 = useSpring(
-    useTransform(scrollYProgress, [0, 0.7], [0, Math.max(effectiveHeight, 180)]),
+    useTransform(scrollYProgress, [0, 0.7], [0, Math.max(effectiveHeight, 100)]),
     {
       stiffness: 480,
       damping: 88,
@@ -53,7 +68,7 @@ export const TracingBeam = ({
       ref={ref}
       className={cn("relative mx-auto h-full w-full max-w-4xl", className)}
     >
-      <div className="pointer-events-none absolute top-3 -left-4 z-10 md:-left-20">
+      <div className="pointer-events-none absolute top-3 -left-6 z-10 sm:-left-10 md:-left-20">
         <motion.div
           transition={{
             duration: 0.2,

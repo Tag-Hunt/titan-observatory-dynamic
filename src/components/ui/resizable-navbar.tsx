@@ -156,7 +156,7 @@ export const MobileNav = ({ children, className, condensed }: MobileNavProps) =>
   return (
     <motion.div
       className={cn(
-        "pointer-events-auto mx-auto flex w-full flex-col items-center justify-between rounded-2xl border border-transparent bg-transparent px-4 py-3 text-sm text-neutral-200 shadow-none lg:hidden",
+        "pointer-events-auto relative mx-auto flex w-full flex-col items-center justify-between rounded-2xl border border-transparent bg-transparent px-4 py-3 text-sm text-neutral-200 shadow-none lg:hidden",
         className,
       )}
       initial={false}
@@ -182,11 +182,14 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }: MobileNa
   <AnimatePresence>
     {isOpen && (
       <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: "auto", opacity: 1 }}
-        exit={{ height: 0, opacity: 0 }}
-        transition={{ duration: 0.25, ease: "easeInOut" }}
-        className={cn("flex w-full flex-col gap-3 pt-4", className)}
+        initial={{ opacity: 0, y: -12 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -12 }}
+        transition={{ duration: 0.2, ease: "easeInOut" }}
+        className={cn(
+          "absolute left-0 right-0 top-full z-30 mt-3 flex max-h-[calc(100vh-8rem)] flex-col gap-3 overflow-y-auto rounded-2xl border border-white/10 bg-[rgba(16,24,48,0.96)] p-4 shadow-[0_18px_42px_-24px_rgba(8,12,24,0.65)] backdrop-blur-xl",
+          className,
+        )}
         onClick={onClose}
       >
         {children}
