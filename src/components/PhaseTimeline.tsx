@@ -26,7 +26,7 @@ export default function PhaseTimeline({ phases }: PhaseTimelineProps) {
 
   return (
     <TracingBeam className="px-0 md:px-8">
-      <div className="relative mx-auto max-w-4xl space-y-12 pt-4">
+      <div className="relative mx-auto max-w-4xl space-y-12 pt-4 pl-8 pr-4 md:pl-0 md:pr-0">
         {items.map(item => (
           <article
             key={item.badge}

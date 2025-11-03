@@ -65,7 +65,7 @@ export default function Home() {
           </p>
           <p className="text-sm leading-relaxed text-titan-text-muted">
             The dish itself is a 10-meter Scientific-Atlanta Cassegrain on a Antlab precision positioner the current owner purchased directly from
-            NASA nearly 50 years ago. It's been carefully maintained and fully operational, with a dehumidifier running 24/7, and balanced well enough to move by hand.
+            NASA nearly 50 years ago. It's been carefully maintained and fully operational, with a dehumidifier running 24/7, zero backlash, and balanced well enough to move by hand.
           </p>
           <div className="max-w-[420px]">
             <GofundmeEmbed />
