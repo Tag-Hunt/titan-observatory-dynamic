@@ -45,8 +45,8 @@ interface MobileNavMenuProps {
 const DESKTOP_EXPANDED = {
   maxWidth: "1120px",
   borderRadius: "16px",
-  borderColor: "rgba(130,150,255,0)",
-  backgroundColor: "rgba(10,16,28,0)",
+  borderColor: "rgba(60,65,92,0)",
+  backgroundColor: "rgba(16,18,26,0)",
   backdropFilter: "blur(0px)",
   y: 0,
   boxShadow: "0 0 0 rgba(0,0,0,0)",
@@ -55,11 +55,11 @@ const DESKTOP_EXPANDED = {
 const DESKTOP_CONDENSED = {
   maxWidth: "860px",
   borderRadius: "999px",
-  borderColor: "rgba(130,150,255,0.45)",
-  backgroundColor: "rgba(16,24,48,0.9)",
+  borderColor: "rgba(60,65,92,0.45)",
+  backgroundColor: "rgba(23,26,40,0.9)",
   backdropFilter: "blur(18px)",
   y: 0,
-  boxShadow: "0 28px 70px rgba(10,16,32,0.55)",
+  boxShadow: "0 28px 70px rgba(12,18,32,0.55)",
 };
 
 const CONDENSE_NAV_SCROLL_Y = 160;
@@ -99,7 +99,7 @@ export const NavBody = ({ children, className, condensed }: NavBodyProps) => {
   return (
     <motion.div
       className={cn(
-        "pointer-events-auto hidden items-center gap-6 rounded-2xl border border-transparent px-6 py-3 text-sm text-neutral-300 transition lg:flex",
+        "pointer-events-auto hidden items-center gap-6 rounded-2xl border border-transparent px-6 py-3 text-sm text-titan-text-primary transition lg:flex",
         condensed
           ? "shadow-[0_18px_42px_-24px_rgba(8,12,24,0.65)]"
           : "shadow-none",
@@ -123,7 +123,7 @@ export const NavItems = ({ items, className, activePath, onItemClick }: NavItems
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "relative flex flex-1 items-center justify-center gap-2 text-sm font-medium transition",
+        "relative flex flex-1 items-center justify-center gap-2 text-sm font-medium text-titan-text-muted transition",
         className,
       )}
     >
@@ -135,12 +135,15 @@ export const NavItems = ({ items, className, activePath, onItemClick }: NavItems
             href={item.link}
             onMouseEnter={() => setHovered(idx)}
             onClick={onItemClick}
-            className="relative rounded-full px-3 py-1.5 text-neutral-200 transition hover:text-white"
+            className={cn(
+              "relative rounded-full px-3 py-1.5 transition hover:text-titan-text-secondary",
+              isActive ? "text-titan-text-secondary" : undefined,
+            )}
           >
             {(hovered === idx || isActive) && (
               <motion.span
                 layoutId="navbar-hover"
-                className="absolute inset-0 rounded-full bg-[rgba(124,141,255,0.2)]"
+                className="absolute inset-0 rounded-full bg-[rgba(198,147,68,0.18)]"
                 transition={{ type: "spring", stiffness: 360, damping: 32 }}
               />
             )}
@@ -156,13 +159,13 @@ export const MobileNav = ({ children, className, condensed }: MobileNavProps) =>
   return (
     <motion.div
       className={cn(
-        "pointer-events-auto relative mx-auto flex w-full flex-col items-center justify-between rounded-2xl border border-transparent bg-transparent px-4 py-3 text-sm text-neutral-200 shadow-none lg:hidden",
+        "pointer-events-auto relative mx-auto flex w-full flex-col items-center justify-between rounded-2xl border border-transparent bg-transparent px-4 py-3 text-sm text-titan-text-primary shadow-none lg:hidden",
         className,
       )}
       initial={false}
       animate={{
-        borderColor: condensed ? "rgba(124,141,255,0.45)" : "rgba(124,141,255,0)",
-        backgroundColor: condensed ? "rgba(16,24,48,0.95)" : "rgba(16,24,48,0)",
+        borderColor: condensed ? "rgba(60,65,92,0.45)" : "rgba(60,65,92,0)",
+        backgroundColor: condensed ? "rgba(23,26,40,0.95)" : "rgba(23,26,40,0)",
         boxShadow: condensed ? "0 18px 42px -24px rgba(8,12,24,0.65)" : "0 0 0 rgba(0,0,0,0)",
         backdropFilter: condensed ? "blur(16px)" : "blur(0px)",
         y: condensed ? 6 : 0,
@@ -187,7 +190,7 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }: MobileNa
         exit={{ opacity: 0, y: -12 }}
         transition={{ duration: 0.2, ease: "easeInOut" }}
         className={cn(
-          "absolute left-0 right-0 top-full z-30 mt-3 flex max-h-[calc(100vh-8rem)] flex-col gap-3 overflow-y-auto rounded-2xl border border-white/10 bg-[rgba(16,24,48,0.96)] p-4 shadow-[0_18px_42px_-24px_rgba(8,12,24,0.65)] backdrop-blur-xl",
+          "absolute left-0 right-0 top-full z-30 mt-3 flex max-h-[calc(100vh-8rem)] flex-col gap-3 overflow-y-auto rounded-2xl border border-[rgba(60,65,92,0.4)] bg-[rgba(23,26,40,0.96)] p-4 text-titan-text-primary shadow-[0_18px_42px_-24px_rgba(8,12,24,0.65)] backdrop-blur-xl",
           className,
         )}
         onClick={onClose}
@@ -208,7 +211,7 @@ export const MobileNavToggle = ({
   <button
     type="button"
     onClick={onClick}
-    className="flex h-9 w-9 items-center justify-center rounded-full border border-neutral-700 text-neutral-100"
+    className="flex h-9 w-9 items-center justify-center rounded-full border border-[#3c415c] bg-titan-bg text-titan-text-secondary"
     aria-expanded={isOpen}
     aria-label="Toggle navigation"
   >
@@ -219,9 +222,8 @@ export const MobileNavToggle = ({
 export const NavbarLogo = () => (
   <Link
     href="/"
-    className="relative z-20 flex items-center gap-2 rounded-full px-2 py-1 text-sm font-semibold text-neutral-100"
+    className="relative z-20 flex items-center rounded-full px-2 py-1 text-sm font-semibold text-titan-text-secondary"
   >
-    <span className="h-6 w-6 rounded-full bg-gradient-to-r from-[#7d8bff] to-[#a194ff]" />
     Titan Observatory
   </Link>
 );
@@ -247,10 +249,11 @@ export const NavbarButton = ({
     "inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold transition";
 
   const variantStyles = {
-    primary: "bg-[#7d8bff] text-neutral-950 hover:bg-[#a194ff]",
-    secondary: "border border-[#7d8bff]/60 text-[#7d8bff] hover:bg-[#7d8bff]/10",
+    primary:
+      "bg-titan-orange text-titan-bg hover:brightness-110",
+    secondary: "border border-titan-orange/60 text-titan-yellow hover:bg-titan-orange/10",
     dark: "bg-neutral-900 text-neutral-100 hover:bg-neutral-800",
-    gradient: "bg-gradient-to-r from-[#7d8bff] to-[#a194ff] text-neutral-950",
+    gradient: "bg-gradient-to-r from-titan-purple to-[#565b7a] text-titan-text-secondary",
   } as const;
 
   const TagComponent = Tag as React.ElementType;

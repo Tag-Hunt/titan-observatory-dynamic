@@ -5,22 +5,22 @@
 html, body, :root { height: 100%; }
 
 :root {
-  --color-bg: 10 12 18;
-  --color-bg-alt: 18 23 35;
-  --color-surface: 26 32 52;
-  --color-surface-hover: 36 44 66;
-  --color-border: 58 72 104;
-  --color-status-line: 44 58 88;
-  --color-text-primary: 222 231 252;
-  --color-text-secondary: 244 248 255;
-  --color-text-muted: 172 184 214;
-  --color-red: 255 99 132;
-  --color-green: 110 204 172;
-  --color-blue: 88 160 255;
-  --color-yellow: 248 196 92;
-  --color-purple: 156 134 255;
-  --color-orange: 255 150 102;
-  --color-aqua: 102 212 232;
+  --color-bg: 16 18 26;
+  --color-bg-alt: 23 26 40;
+  --color-surface: 31 34 51;
+  --color-surface-hover: 40 44 68;
+  --color-border: 58 63 91;
+  --color-status-line: 47 51 77;
+  --color-text-primary: 230 232 245;
+  --color-text-secondary: 245 246 255;
+  --color-text-muted: 165 170 197;
+  --color-red: 212 106 115;
+  --color-green: 127 184 165;
+  --color-blue: 94 102 138;
+  --color-yellow: 234 204 132;
+  --color-purple: 60 65 92;
+  --color-orange: 198 147 68;
+  --color-aqua: 138 184 212;
 }
 
 :root[data-theme="sunrise"] {
@@ -52,11 +52,11 @@ html, body, :root { height: 100%; }
   }
 
   a {
-    @apply text-[#9caeff] transition-colors duration-200;
+    @apply text-titan-orange transition-colors duration-200;
   }
 
   a:hover {
-    @apply text-[#d4dcff];
+    @apply text-titan-yellow;
   }
 
   ::selection {

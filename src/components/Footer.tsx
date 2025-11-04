@@ -49,7 +49,7 @@ export default function Footer() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-12 sm:px-8 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-md space-y-3 text-center lg:text-left">
           <p className="inline-flex items-center justify-center gap-2 text-base font-semibold text-titan-text-secondary lg:justify-start">
-            <span className="h-2 w-2 rounded-full bg-gradient-to-r from-[#7d8bff] to-[#a194ff]" />
+            <span className="h-2 w-2 rounded-full bg-gradient-to-r from-titan-purple to-[#565b7a]" />
             Titan Observatory
           </p>
           <p className="leading-relaxed text-titan-text-primary/80">
@@ -59,10 +59,7 @@ export default function Footer() {
           <div className="space-y-1 text-sm text-titan-text-secondary">
             <p>
               Contact:&nbsp;
-              <a
-                className="text-titan-text-primary hover:text-[#d4dcff]"
-                href="mailto:contact@titanobservatory.org"
-              >
+              <a className="text-titan-text-primary hover:text-titan-yellow" href="mailto:contact@titanobservatory.org">
                 contact@titanobservatory.org
               </a>
             </p>
@@ -78,7 +75,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map(link => (
                 <li key={link.href}>
-                  <Link className="hover:text-[#d4dcff]" href={link.href}>
+                  <Link className="hover:text-titan-yellow" href={link.href}>
                     {link.label}
                   </Link>
                 </li>
@@ -93,7 +90,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {communityLinks.map(link => (
                 <li key={link.href}>
-                  <a className="hover:text-[#d4dcff]" href={link.href} target="_blank" rel="noreferrer">
+                  <a className="hover:text-titan-yellow" href={link.href} target="_blank" rel="noreferrer">
                     {link.label}
                   </a>
                 </li>
@@ -150,14 +147,14 @@ export default function Footer() {
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-6 text-xs text-titan-text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
           <p>&copy; {new Date().getFullYear()} Titan Observatory. All rights reserved.</p>
           <p className="flex flex-wrap justify-center gap-4 md:justify-end">
-            <Link className="hover:text-[#d4dcff]" href="/terms">
+            <Link className="hover:text-titan-yellow" href="/terms">
               Terms
             </Link>
-            <Link className="hover:text-[#d4dcff]" href="/privacy">
+            <Link className="hover:text-titan-yellow" href="/privacy">
               Privacy
             </Link>
             <a
-              className="hover:text-[#d4dcff]"
+              className="hover:text-titan-yellow"
               href="https://community.titanobservatory.org/c/announcements"
               target="_blank"
               rel="noreferrer"

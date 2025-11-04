@@ -138,7 +138,7 @@ export default function Navbar() {
                 key={item.link}
                 href={item.link}
                 onClick={closeMobile}
-                className={`rounded-full px-3 py-2 text-sm font-medium ${pathname === item.link ? "bg-titan-blue/10 text-titan-text-secondary" : "text-titan-text-muted hover:bg-titan-bg-alt/70"}`}
+                className={`rounded-full px-3 py-2 text-sm font-medium ${pathname === item.link ? "bg-titan-orange/15 text-titan-text-secondary" : "text-titan-text-muted hover:bg-titan-bg-alt/70"}`}
               >
                 {item.name}
               </Link>

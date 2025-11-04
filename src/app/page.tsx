@@ -122,7 +122,7 @@ export default function Home() {
               href="https://forms.gle/MwwsctzD1G5woQAo6"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-titan-blue/60 bg-titan-blue/20 px-6 py-2.5 text-sm font-semibold text-titan-blue transition hover:bg-titan-blue/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-blue"
+              className="inline-flex items-center justify-center rounded-full border border-titan-purple/70 bg-titan-purple px-6 py-2.5 text-sm font-semibold text-titan-text-secondary transition hover:bg-[#565b7a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-purple"
             >
               Apply to Volunteer
             </a>
@@ -130,7 +130,7 @@ export default function Home() {
               href="https://community.titanobservatory.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-titan-purple/50 bg-titan-purple/15 px-6 py-2.5 text-sm font-semibold text-titan-purple transition hover:bg-titan-purple/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-purple"
+              className="inline-flex items-center justify-center rounded-full border border-titan-blue/60 bg-titan-blue/20 px-6 py-2.5 text-sm font-semibold text-titan-text-secondary transition hover:bg-titan-blue/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-blue"
             >
               Visit the Forum
             </a>
@@ -138,7 +138,7 @@ export default function Home() {
               href="https://discord.gg/T5F6AG26tE"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-titan-green/60 bg-titan-green/15 px-6 py-2.5 text-sm font-semibold text-titan-green transition hover:bg-titan-green/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-green"
+              className="inline-flex items-center justify-center rounded-full border border-titan-green/60 bg-titan-green/20 px-6 py-2.5 text-sm font-semibold text-titan-text-secondary transition hover:bg-titan-green/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-green"
             >
               Join the Discord
             </a>
