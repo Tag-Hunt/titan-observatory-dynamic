@@ -2,6 +2,7 @@ import Image from "next/image";
 import GofundmeEmbed from "@/components/GofundmeEmbed";
 import PhaseTimeline from "@/components/PhaseTimeline";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const revalidate = 3600;
 
@@ -155,6 +156,19 @@ export default function Home() {
             <li>- Educational Writer</li>
           </ul>
         </aside>
+      </section>
+
+      <section className="rounded-3xl border border-titan-border/60 bg-titan-bg-alt/80 p-8 shadow-[0_22px_48px_-36px_rgba(10,15,35,0.9)] backdrop-blur-md">
+        <div className="space-y-4">
+          <p className="text-xs uppercase tracking-[0.3em] text-titan-text-muted">Newsletter</p>
+          <h2 className="text-2xl font-semibold text-titan-text-secondary">Stay in the loop</h2>
+          <p className="text-sm leading-relaxed text-titan-text-primary/90">
+            Drop your email below to get occasional updates on construction progress, community events, and upcoming observing opportunities.
+          </p>
+        </div>
+        <div className="mt-6">
+          <NewsletterForm />
+        </div>
       </section>
 
       <section className="space-y-10">
