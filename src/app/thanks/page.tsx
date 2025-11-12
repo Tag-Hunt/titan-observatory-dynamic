@@ -15,14 +15,6 @@ export default function NewsletterThanksPage() {
           You&apos;re officially on the list! Expect occasional notes on fundraising milestones, contruction progress, and ways
           you can help bring the observatory online.
         </p>
-        <div className="space-y-2 text-sm text-titan-text-muted">
-          <p>Coming to your inbox:</p>
-          <ul className="list-inside list-disc text-left text-titan-text-primary/90">
-            <li>Regular progress updates.</li>
-            <li>Calls for volunteers and community input.</li>
-            <li>Early notice for observing sessions and public events.</li>
-          </ul>
-        </div>
         <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
           <Link
             href="/"
