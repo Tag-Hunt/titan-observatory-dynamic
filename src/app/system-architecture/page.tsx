@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import DiagramViewer from "./DiagramViewer";
 
 export const metadata: Metadata = {
   title: "System Architecture | Titan Observatory",
@@ -19,18 +19,9 @@ export default function SystemArchitecturePage() {
         </p>
       </header>
 
-      <div className="overflow-auto rounded-3xl border border-titan-border/60 bg-titan-bg-alt/60 p-5">
-        <Image
-          src="/diagram.png"
-          alt="System architecture diagram"
-          width={5552}
-          height={1908}
-          priority
-          className="h-auto w-full"
-        />
-      </div>
+      <DiagramViewer />
 
-      <section className="max-w-3xl space-y-5 text-base leading-relaxed text-titan-text-primary/90">
+      <section className="mx-auto max-w-3xl space-y-5 text-base leading-relaxed text-titan-text-primary/90">
         <div className="space-y-2">
           <h3 className="text-xl font-semibold text-titan-text-secondary">Overview</h3>
           <p>

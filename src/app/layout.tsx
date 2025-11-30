@@ -9,6 +9,7 @@ import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import "react-photo-view/dist/react-photo-view.css";
 
 export const metadata: Metadata = {
   title: "Titan Observatory",
