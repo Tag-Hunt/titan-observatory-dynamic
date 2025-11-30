@@ -55,6 +55,7 @@ export default function Navbar() {
     () => [
       { name: "About", link: "/" },
       { name: "Specifications", link: "/specifications" },
+      { name: "System Architecture", link: "/system-architecture" },
       { name: "Concept Dashboard", link: "/concept-dashboard" },
     ],
     [],
