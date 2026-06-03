@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import CommentsEmbed from "@/components/CommentsEmbed";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
@@ -23,8 +22,6 @@ type TopicWithContent = TopicSummary & {
   cooked?: string;
   author?: string;
 };
-
-const EMBED_CLASSNAME = "embed-dark";
 
 async function fetchCategoryTopics(): Promise<TopicSummary[]> {
   const res = await fetch(`${DISCOURSE_BASE}/c/${CATEGORY_SLUG}/${CATEGORY_ID}.json`, {
@@ -139,16 +136,6 @@ export default async function ProjectUpdatesPage() {
                 }}
               />
 
-              <div className="space-y-3 border-t border-titan-border/40 pt-5">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-titan-text-muted sm:text-xs">
-                  Comments
-                </p>
-                <CommentsEmbed
-                  src={`${DISCOURSE_BASE}/embed/comments?topic_id=${topic.id}&class_name=${EMBED_CLASSNAME}`}
-                  title={`Comments for ${topic.title}`}
-                  className="w-full rounded-2xl border border-titan-border/60 bg-titan-bg-alt/50 p-2"
-                />
-              </div>
             </AnimatedSection>
           ))
         )}
