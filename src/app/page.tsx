@@ -16,7 +16,7 @@ export default function Home() {
             Phase 1 In Progress
           </p>
           <h1 className="max-w-[13ch] text-[2.85rem] font-bold leading-[0.98] text-titan-text-secondary sm:max-w-none sm:text-5xl">
-            A 10-meter radio telescope,
+            A network of radio telescopes,
             <br className="hidden sm:block" />
             <span className="text-titan-yellow"> open to everyone.</span>
           </h1>
