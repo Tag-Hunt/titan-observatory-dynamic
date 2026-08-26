@@ -4,7 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Titan Observatory",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for the Titan Observatory website — how we collect, use, and protect your information.",
 };

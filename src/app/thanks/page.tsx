@@ -3,8 +3,9 @@ import { IconTelescope } from "@tabler/icons-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata = {
-  title: "Thanks for joining | Titan Astronomical Observatory",
-  description: "Thanks for being part of the Titan Astronomical Observatory newsletter.",
+  title: "Thanks for joining",
+  description:
+    "You're subscribed to the Titan Observatory newsletter — updates on construction milestones, fundraising progress, and ways to help.",
 };
 
 export default function NewsletterThanksPage() {

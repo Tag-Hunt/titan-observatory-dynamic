@@ -7,9 +7,9 @@ import AnimatedSection from "@/components/AnimatedSection";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "The Team | Titan Observatory",
+  title: "The Team",
   description:
-    "The people building Titan Observatory, with placeholders for team bios and roles.",
+    "The people behind Titan Observatory — executive director Thomas Oglesby, the outreach team, and the board of directors guiding the radio telescope project.",
 };
 
 const executiveDirector = {

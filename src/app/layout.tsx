@@ -5,12 +5,17 @@ import Navbar from "@/components/Navbar";
 import ClientEnhancements from "@/components/ClientEnhancements";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
+import { siteDescription, siteName, siteUrl } from "@/lib/site";
 import "./globals.css";
 import "react-photo-view/dist/react-photo-view.css";
 
 export const metadata: Metadata = {
-  title: "Titan Observatory",
-  description: "Community Radio Observatory",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} — Radio Telescopes Open to Everyone`,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
 };
 
 export const viewport: Viewport = {

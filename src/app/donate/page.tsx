@@ -7,7 +7,7 @@ import GivebutterWidget from "@/components/GivebutterWidget";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Donate | Titan Observatory",
+  title: "Donate",
   description:
     "Support Titan Observatory with a tax-deductible donation. Give online, through a donor-advised fund, or contribute appreciated assets.",
 };

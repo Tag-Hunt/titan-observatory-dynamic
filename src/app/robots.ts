@@ -1,9 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl =
-  process.env.NEXTAUTH_URL ??
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://titanobservatory.org";
+import { absoluteUrl, siteUrl } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -14,6 +11,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
+    sitemap: absoluteUrl("/sitemap.xml"),
     host: siteUrl,
   };
 }

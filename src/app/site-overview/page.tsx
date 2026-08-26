@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Site Overview | Titan Observatory",
+  title: "Site Overview",
   description:
     "Site readiness, zoning, and radio environment details for the proposed Titan observatory location.",
 };

@@ -7,7 +7,7 @@ import { IconUser } from "@tabler/icons-react";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "About | Titan Observatory",
+  title: "About",
   description:
     "Our mission, why radio astronomy matters, the project roadmap, and the team behind Titan Observatory.",
 };

@@ -4,8 +4,9 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "System Architecture | Titan Observatory",
-  description: "System architecture diagrams and documentation.",
+  title: "System Architecture",
+  description:
+    "How an observation request moves through Titan Observatory — from scheduling API and control service to dish pointing, signal capture, and finished data.",
 };
 
 const architectureSteps = [
