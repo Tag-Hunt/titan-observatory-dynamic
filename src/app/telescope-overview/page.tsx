@@ -10,7 +10,7 @@ import { BackgroundGradient } from "@/components/ui/background-gradient";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Telescope Overview | Titan Observatory",
+  title: "Telescope Overview",
   description:
     "Specifications and imagery for Titan's 10-meter NASA-built radio telescope.",
 };

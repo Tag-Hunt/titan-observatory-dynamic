@@ -6,7 +6,7 @@ import FaqList from "./FaqList";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "FAQ | Titan Observatory",
+  title: "FAQ",
   description:
     "Frequently asked questions about the Titan Observatory project, timeline, and community involvement.",
 };

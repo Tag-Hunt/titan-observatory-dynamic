@@ -4,7 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Titan Observatory",
+  title: "Terms of Service",
   description:
     "Terms of Service for the Titan Observatory website and online platform.",
 };

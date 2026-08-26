@@ -3,8 +3,9 @@ import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "Project Updates | Titan Observatory",
-  description: "Latest project updates from the Titan Observatory community.",
+  title: "Project Updates",
+  description:
+    "Construction milestones, engineering notes, and fundraising progress from the team building Titan Observatory's community radio telescope.",
 };
 
 const DISCOURSE_BASE = "https://community.titanobservatory.org";

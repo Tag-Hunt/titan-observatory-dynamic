@@ -1,11 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import DeferredDonorMessageCarousel from "@/components/DeferredDonorMessageCarousel";
 import DiscordPresenceBadge from "@/components/DiscordPresenceBadge";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import GivebutterWidget from "@/components/GivebutterWidget";
+import { siteName } from "@/lib/site";
 
 export const revalidate = 3600;
+
+export const metadata: Metadata = {
+  // Absolute: the home page is the brand, so it should not take the "%s | …" template.
+  title: { absolute: `${siteName} — Radio Telescopes Open to Everyone` },
+  description:
+    "Titan Observatory is building a network of radio telescopes open to everyone — real instruments and a remote observing platform for hands-on astronomy.",
+};
 
 export default function Home() {
   return (
