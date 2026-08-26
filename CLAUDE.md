@@ -23,7 +23,7 @@ No test framework is configured.
 
 ### Routing (App Router)
 
-Pages live in `src/app/`. Key routes: `/`, `/about`, `/team`, `/donate`, `/blog`, `/faq`, `/telescope-overview`, `/site-overview`, `/system-architecture`, `/concept-dashboard`, `/project-updates`, `/thanks`.
+Pages live in `src/app/`. Key routes: `/`, `/about`, `/team`, `/donate`, `/blog`, `/faq`, `/telescope-overview`, `/site-overview`, `/system-architecture`, `/project-updates`, `/thanks`.
 
 API routes in `src/app/api/`:
 - `GET /api/posts` — blog posts from Prisma/PostgreSQL

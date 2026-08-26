@@ -18,6 +18,8 @@ import {
   NavbarLogo,
 } from "@/components/ui/resizable-navbar";
 
+const APP_URL = "https://app.titanobservatory.org";
+
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -41,7 +43,6 @@ export default function Navbar() {
           { name: "Telescope Overview", link: "/telescope-overview" },
           { name: "Site Overview", link: "/site-overview" },
           { name: "System Architecture", link: "/system-architecture" },
-          { name: "Concept Dashboard", link: "/concept-dashboard" },
         ],
       },
     ],
@@ -57,23 +58,23 @@ export default function Navbar() {
     const buttonClass = context === "mobile" ? "w-full" : undefined;
     const handleClick = context === "mobile" ? closeMobile : undefined;
 
-    const donateButton = (
+    const loginButton = (
       <NavbarButton
-        key="donate"
-        href="/donate"
+        key="login"
+        href={APP_URL}
         variant="primary"
         className={buttonClass}
         onClick={handleClick}
       >
-        Donate
+        Login
       </NavbarButton>
     );
 
     if (context === "mobile") {
-      return <div className="flex w-full flex-col gap-3">{donateButton}</div>;
+      return <div className="flex w-full flex-col gap-3">{loginButton}</div>;
     }
 
-    return donateButton;
+    return loginButton;
   };
 
   return (
