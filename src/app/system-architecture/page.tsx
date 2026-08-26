@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import DiagramViewer from "./DiagramViewer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { cn } from "@/lib/utils";
@@ -120,12 +119,6 @@ export default function SystemArchitecturePage() {
           gather feedback. We&apos;ll publish the services on GitHub under an open-source license so you can browse the
           code and contribute improvements.
         </p>
-        <Link
-          href="/concept-dashboard"
-          className="inline-flex items-center gap-1 text-sm font-semibold text-titan-text-secondary underline decoration-titan-border/60 underline-offset-2 transition hover:text-titan-yellow hover:decoration-titan-yellow"
-        >
-          See the concept dashboard &rarr;
-        </Link>
       </header>
 
       <AnimatedSection>

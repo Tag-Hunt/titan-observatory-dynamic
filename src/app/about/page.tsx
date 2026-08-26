@@ -142,7 +142,7 @@ export default function AboutPage() {
             See the Platform Take Shape
           </h2>
         </div>
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid max-w-xl gap-5">
           {[
             {
               href: "/system-architecture",
@@ -150,13 +150,6 @@ export default function AboutPage() {
               text: "See how the control, monitoring, and data systems are designed to work together.",
               image: "/images/ArchitecturePlan.webp",
               alt: "Preview of the Titan Observatory system architecture diagram.",
-            },
-            {
-              href: "/concept-dashboard",
-              title: "Concept Dashboard",
-              text: "Browse interface mockups showing the direction of the future observing platform.",
-              image: "/images/Dashboard-Mockup-1.webp",
-              alt: "Preview of the Titan Observatory concept dashboard.",
             },
           ].map((item) => (
             <Link
