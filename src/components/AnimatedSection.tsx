@@ -10,7 +10,7 @@ export default function AnimatedSection({
   className,
 }: AnimatedSectionProps) {
   return (
-    <div className={className}>
+    <div className={className} data-reveal>
       {children}
     </div>
   );

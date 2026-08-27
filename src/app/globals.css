@@ -21,6 +21,34 @@ html, body, :root { height: 100%; }
   --color-aqua: 138 184 212;
 }
 
+/* Shared section entrance effect. JavaScript adds the data attribute only to
+   elements it is actively observing, so content remains visible without JS. */
+[data-section-reveal] {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html[data-section-reveals="enabled"]:not(.animations-disabled)
+    [data-section-reveal] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 720ms ease,
+      transform 720ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  html[data-section-reveals="enabled"]:not(.animations-disabled)
+    [data-reveal="lag"] {
+    transition-delay: 140ms;
+  }
+
+  html[data-section-reveals="enabled"]
+    [data-section-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 :root.text-size-large {
   font-size: 112.5%;
 }

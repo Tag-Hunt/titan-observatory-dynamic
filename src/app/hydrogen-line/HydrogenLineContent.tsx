@@ -132,58 +132,6 @@ function InlineHoverPopover({
 }
 
 export default function HydrogenLineContent() {
-  const pageRef = useRef<HTMLDivElement | null>(null);
-
-  // Scroll-driven reveals: every [data-reveal] element rises into place the
-  // first time it enters the viewport. With reduced motion preferred we skip
-  // straight to the revealed state (the CSS transition is also disabled).
-  useEffect(() => {
-    const root = pageRef.current;
-    if (!root) return;
-    const els = Array.from(root.querySelectorAll<HTMLElement>("[data-reveal]"));
-    if (els.length === 0) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      for (const el of els) el.classList.add("is-revealed");
-      return;
-    }
-    const pending = new Set(els);
-    const reveal = (el: HTMLElement) => {
-      el.classList.add("is-revealed");
-      pending.delete(el);
-      observer.unobserve(el);
-    };
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) reveal(entry.target as HTMLElement);
-        }
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
-    );
-    for (const el of els) observer.observe(el);
-    // Belt-and-braces geometric sweep: if the observer never fires (it ticks
-    // with the refresh driver, which some environments suspend), anything
-    // already in the viewport still reveals shortly after mount and on scroll.
-    const sweep = () => {
-      for (const el of Array.from(pending)) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 40 && rect.bottom > 0) reveal(el);
-      }
-      if (pending.size === 0) window.removeEventListener("scroll", onScroll);
-    };
-    let sweepTimer = window.setTimeout(sweep, 350);
-    const onScroll = () => {
-      clearTimeout(sweepTimer);
-      sweepTimer = window.setTimeout(sweep, 120);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      observer.disconnect();
-      clearTimeout(sweepTimer);
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
-
   const animationsPaused = false;
 
   const [spinFlipRef, spinFlipActive] = useVisibleAnimation<HTMLDivElement>(
@@ -192,7 +140,7 @@ export default function HydrogenLineContent() {
 
   return (
     <div className="h1-fullbleed">
-      <div className="queue-waiting" ref={pageRef}>
+      <div className="queue-waiting">
         <div className="h1-page">
           {/* ── Hero ──────────────────────────────────────────────────────── */}
           <section className="h1-hero" id="h1-intro-section">

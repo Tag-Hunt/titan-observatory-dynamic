@@ -52,6 +52,7 @@ Titan Observatory is a Florida-based nonprofit
             >
               What is radio astronomy?
             </Link>
+            <DiscordPresenceBadge className="w-full sm:w-auto" />
           </div>
         </div>
 
@@ -69,33 +70,6 @@ Titan Observatory is a Florida-based nonprofit
             priority
           />
         </BackgroundGradient>
-      </section>
-
-      <section id="why-it-matters" className="mx-auto max-w-3xl scroll-mt-24 space-y-5">
-        <h2 className="text-2xl font-semibold text-titan-text-secondary">
-          Why It Matters
-        </h2>
-        <p className="text-sm leading-relaxed text-titan-text-primary/90">
-          Much of our understanding of the universe beyond the solar system
-          comes from the properties of electromagnetic waves received from
-          space. But <em>how</em>? How can light tell us the composition of a
-          planet&apos;s atmosphere from hundreds of light-years away? Or that
-          some smudge in an image is a galaxy born near the dawn of the
-          universe, billions of years ago?
-        </p>
-        <p className="text-sm leading-relaxed text-titan-text-primary/90">
-          Radio astronomy covers the longest-wavelength end of that spectrum.
-          Titan Observatory will initially observe at the 21&thinsp;cm hydrogen
-          line (1420&thinsp;MHz), detecting the neutral hydrogen that permeates
-          the Milky Way, including mapping its rotation curve, one of the
-          first clues we had for the existence of dark matter.
-        </p>
-        <p className="text-sm leading-relaxed text-titan-text-primary/90">
-          By creating a more accessible and engaging way to experience radio
-          astronomy, we hope to inspire future astronomers and help curious
-          citizen scientists better understand what the electromagnetic spectrum
-          can tell us about the universe we live in.
-        </p>
       </section>
 
       <div className="-mt-4 -mb-4 sm:-mt-8 sm:-mb-14">
@@ -161,6 +135,38 @@ Titan Observatory is a Florida-based nonprofit
               </li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="why-it-matters"
+        className="scroll-mt-24 rounded-3xl border border-titan-border/50 bg-titan-bg-alt/60 p-7 backdrop-blur-sm sm:p-8"
+      >
+        <div className="mx-auto max-w-3xl space-y-5">
+          <h2 className="text-2xl font-semibold text-titan-text-secondary">
+            Why It Matters
+          </h2>
+          <p className="text-sm leading-7 text-titan-text-primary/90">
+            Much of our understanding of the universe beyond the solar system
+            comes from the properties of electromagnetic waves received from
+            space. But <em>how</em>? How can light tell us the composition of a
+            planet&apos;s atmosphere from hundreds of light-years away? Or that
+            some smudge in an image is a galaxy born near the dawn of the
+            universe, billions of years ago?
+          </p>
+          <p className="text-sm leading-7 text-titan-text-primary/90">
+            Radio astronomy covers the longest-wavelength end of that spectrum.
+            Titan Observatory will initially observe at the 21&thinsp;cm hydrogen
+            line (1420&thinsp;MHz), detecting the neutral hydrogen that permeates
+            the Milky Way, including mapping its rotation curve, one of the
+            first clues we had for the existence of dark matter.
+          </p>
+          <p className="text-sm leading-7 text-titan-text-primary/90">
+            By creating a more accessible and engaging way to experience radio
+            astronomy, we hope to inspire future astronomers and help curious
+            citizen scientists better understand what the electromagnetic
+            spectrum can tell us about the universe we live in.
+          </p>
         </div>
       </section>
 
@@ -237,7 +243,6 @@ Titan Observatory is a Florida-based nonprofit
               Visit the Forum
             </a>
           </div>
-          <DiscordPresenceBadge className="w-full sm:w-auto" />
         </div>
 
         <div className="mx-auto w-full max-w-[420px] overflow-hidden lg:max-w-none">

@@ -4,7 +4,7 @@ import { DopplerAnimation } from './DopplerAnimation';
 
 // The Doppler-effect explainer copy + animation, shared between the queue
 // landing page section and the in-app "learn more" modal launched from the
-// spectrum panel. `reveal` opts into the queue page's scroll-driven reveal
+// spectrum panel. `reveal` opts into the site's scroll-driven reveal
 // animation; the modal renders the content immediately visible.
 export function DopplerExplainer({ paused = false, reveal = false }: { paused?: boolean; reveal?: boolean } = {}) {
   return (

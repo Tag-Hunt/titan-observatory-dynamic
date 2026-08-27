@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
+import SectionReveals from "@/components/SectionReveals";
 
 const DecorativeEffects = dynamic(() => import("@/components/DecorativeEffects"), {
   ssr: false,
@@ -27,6 +28,7 @@ export default function ClientEnhancements({
 
   return (
     <>
+      <SectionReveals pathname={pathname} />
       <GivebutterConversionTracker />
       <DecorativeEffects showShootingStars={pathname === "/"} />
       {measurementId ? <GoogleAnalytics measurementId={measurementId} /> : null}
