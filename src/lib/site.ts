@@ -3,12 +3,10 @@ const FALLBACK_SITE_URL = "https://titanobservatory.org";
 /**
  * Absolute, trailing-slash-free origin for the public site.
  *
- * Resolution order matches the one `robots.ts` has always used, so the
- * sitemap, robots directives and `metadataBase` can never disagree about
- * which origin is canonical.
+ * Keep sitemap, robots directives and `metadataBase` on the same canonical
+ * origin, with a production fallback for environments that omit configuration.
  */
 export const siteUrl = (
-  process.env.NEXTAUTH_URL ??
   process.env.NEXT_PUBLIC_SITE_URL ??
   FALLBACK_SITE_URL
 ).replace(/\/+$/, "");

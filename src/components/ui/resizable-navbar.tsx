@@ -50,7 +50,6 @@ interface MobileNavMenuProps {
   children: React.ReactNode;
   className?: string;
   isOpen: boolean;
-  onClose: () => void;
 }
 
 const DESKTOP_EXPANDED = {
@@ -257,7 +256,7 @@ export const MobileNavHeader = ({ children, className }: MobileNavHeaderProps) =
   <div className={cn("flex w-full items-center justify-between gap-4", className)}>{children}</div>
 );
 
-export const MobileNavMenu = ({ children, className, isOpen, onClose }: MobileNavMenuProps) => (
+export const MobileNavMenu = ({ children, className, isOpen }: MobileNavMenuProps) => (
   <AnimatePresence>
     {isOpen && (
       <motion.div

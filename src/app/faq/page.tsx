@@ -108,7 +108,6 @@ export default function FaqPage() {
         {sections.map((section, index) => (
           <AnimatedSection
             key={section.label}
-            delay={index * 0.1}
             className={index > 0 ? "border-t border-titan-border/40 pt-14" : ""}
           >
             <div className="mb-6 flex items-center gap-3">

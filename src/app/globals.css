@@ -8,9 +8,7 @@ html, body, :root { height: 100%; }
   --color-bg: 16 18 26;
   --color-bg-alt: 23 26 40;
   --color-surface: 31 34 51;
-  --color-surface-hover: 40 44 68;
   --color-border: 58 63 91;
-  --color-status-line: 47 51 77;
   --color-text-primary: 230 232 245;
   --color-text-secondary: 245 246 255;
   --color-text-muted: 165 170 197;
@@ -37,9 +35,7 @@ html, body, :root { height: 100%; }
   --color-bg: 242 237 228;
   --color-bg-alt: 232 222 210;
   --color-surface: 222 210 196;
-  --color-surface-hover: 210 196 181;
   --color-border: 193 174 156;
-  --color-status-line: 180 159 140;
   --color-text-primary: 67 52 43;
   --color-text-secondary: 43 33 25;
   --color-text-muted: 120 102 89;
@@ -101,26 +97,6 @@ html, body, :root { height: 100%; }
 }
 
 @layer components {
-  .titan-card {
-    @apply bg-titan-surface border border-titan-border rounded-lg shadow-titan;
-  }
-
-  .titan-surface {
-    @apply bg-titan-surface text-titan-text-primary;
-  }
-
-  .titan-input {
-    @apply bg-titan-surface border border-titan-border text-titan-text-primary placeholder:text-titan-text-muted focus:outline-none focus:ring-2 focus:ring-titan-blue focus:border-transparent rounded-md transition-colors duration-150;
-  }
-
-  .titan-button {
-    @apply inline-flex items-center justify-center rounded-md bg-titan-orange px-4 py-2 font-medium text-titan-bg transition-colors duration-200 hover:bg-titan-yellow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-titan-orange focus:ring-offset-titan-bg;
-  }
-
-  .titan-section {
-    @apply bg-titan-bg-alt border border-titan-border rounded-xl shadow-titan;
-  }
-
   /* Discourse-rendered content */
   .discourse-content {
     color: rgb(var(--color-text-primary));

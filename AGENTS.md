@@ -5,7 +5,6 @@
 - `src/components/` contains reusable UI components.
 - `src/lib/` is for shared utilities and data access helpers.
 - `src/types/` stores shared TypeScript types.
-- `prisma/` contains the Prisma schema and migrations.
 - `public/` stores static assets served at the site root.
 
 ## Build, Test, and Development Commands
@@ -13,9 +12,7 @@
 - `npm run dev`: start local dev server with hot reload.
 - `npm run build`: create the production build.
 - `npm start`: run the production server from `.next/`.
-- `npm run lint`: run Next.js/ESLint checks.
-- `npx prisma migrate dev --name <name>`: apply database migrations in dev.
-- `npm run prisma:studio`: open Prisma Studio for local data inspection.
+- `npm run lint`: run ESLint with the Next.js Core Web Vitals and TypeScript rules.
 
 ## Coding Style & Naming Conventions
 - TypeScript + React + Tailwind. Use 2-space indentation and keep lines concise.
@@ -36,5 +33,4 @@
   for UI changes. Note any required env or migration steps.
 
 ## Security & Configuration Tips
-- Copy `.env.example` to `.env` and fill in secrets before running locally.
-- Prisma requires a running PostgreSQL instance for migrations and runtime.
+- Store local secrets in `.env.local`; never commit them.

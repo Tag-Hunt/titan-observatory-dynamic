@@ -227,7 +227,11 @@ export function HydrogenAtomDepiction({ paused }: { paused?: boolean }) {
 
   useEffect(() => {
     if (!tlRef.current) return;
-    paused ? tlRef.current.pause() : tlRef.current.resume();
+    if (paused) {
+      tlRef.current.pause();
+    } else {
+      tlRef.current.resume();
+    }
   }, [paused]);
 
   return (
@@ -323,14 +327,6 @@ const RadialGridWavefield = React.forwardRef<
     };
   }, []);
 
-  useImperativeHandle(ref, () => ({
-    emit() {
-      startRef.current = performance.now();
-      cancelAnimationFrame(rafRef.current);
-      rafRef.current = requestAnimationFrame(draw);
-    },
-  }));
-
   function draw(now: number) {
     const canvas = canvasRef.current;
     const section = sectionRef.current;
@@ -422,7 +418,11 @@ const RadialGridWavefield = React.forwardRef<
       const dist = Math.max(0.001, Math.hypot(dx, dy));
       const off = dist - radius;
       if (Math.abs(off) > WAVEFIELD_BAND_CUTOFF) {
-        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        if (i === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
         continue;
       }
       const band = Math.exp(-(off * off) / WAVEFIELD_BAND_SQ);
@@ -430,10 +430,22 @@ const RadialGridWavefield = React.forwardRef<
       const push = band * ripple * WAVEFIELD.pushPx * strength;
       const px = x + (dx / dist) * push;
       const py = y + (dy / dist) * push;
-      i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+      if (i === 0) {
+        ctx.moveTo(px, py);
+      } else {
+        ctx.lineTo(px, py);
+      }
     }
     ctx.stroke();
   }
+
+  useImperativeHandle(ref, () => ({
+    emit() {
+      startRef.current = performance.now();
+      cancelAnimationFrame(rafRef.current);
+      rafRef.current = requestAnimationFrame(draw);
+    },
+  }));
 
   return null;
 });

@@ -318,7 +318,7 @@ export default function DonatePage() {
             Every Contribution Matters
           </h2>
           <p className="text-sm leading-7 text-titan-text-primary/90">
-            Whether it's $5 or $5,000, every gift moves us closer to first
+            Whether it&apos;s $5 or $5,000, every gift moves us closer to first
             light. Share the campaign with friends and family who believe in
             making science accessible to everyone.
           </p>
@@ -328,7 +328,7 @@ export default function DonatePage() {
             </h3>
             <p className="text-sm leading-7 text-titan-text-primary/80">
               For planned giving, corporate matching, in-kind contributions, or
-              any other way you'd like to support the observatory, reach out at{" "}
+              any other way you&apos;d like to support the observatory, reach out at{" "}
               <a
                 href="mailto:donate@titanobservatory.org"
                 className="font-semibold text-titan-orange underline decoration-titan-orange/40 underline-offset-2 transition hover:decoration-titan-orange"

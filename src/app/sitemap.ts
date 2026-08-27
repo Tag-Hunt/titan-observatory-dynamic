@@ -23,7 +23,6 @@ type Route = {
  * Every publicly indexable route.
  *
  * Deliberately excluded:
- *  - `/thanks`    newsletter double-opt-in landing page; no standalone value
  *  - `/volunteer` permanent redirect to an offsite form
  *  - `/api/*`     also disallowed in robots.ts
  */

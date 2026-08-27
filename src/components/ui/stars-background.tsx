@@ -171,6 +171,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
     minTwinkleSpeed,
     maxTwinkleSpeed,
     generateStars,
+    generateStarsForArea,
     animationsEnabled,
   ]);
 

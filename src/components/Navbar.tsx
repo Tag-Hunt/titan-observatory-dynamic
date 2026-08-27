@@ -104,7 +104,7 @@ export default function Navbar() {
             </Link>
             <MobileNavToggle isOpen={mobileOpen} onClick={() => setMobileOpen(open => !open)} />
           </MobileNavHeader>
-          <MobileNavMenu isOpen={mobileOpen} onClose={closeMobile}>
+          <MobileNavMenu isOpen={mobileOpen}>
             <div className="flex w-full flex-col gap-4">
               {navItems.map(item => {
                 if (item.children?.length) {

@@ -410,10 +410,9 @@ export default function RadioAstronomyPage() {
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {revealed.map((item, index) => (
+            {revealed.map((item) => (
               <AnimatedSection
                 key={item.label}
-                delay={index * 0.08}
                 className="rounded-3xl border border-titan-border/60 bg-titan-bg-alt/90 p-5 text-sm leading-relaxed text-titan-text-primary/90 shadow-[0_14px_34px_-24px_rgba(8,12,24,0.8)] backdrop-blur-sm transition hover:border-titan-purple/40 hover:bg-titan-bg-alt/95"
               >
                 <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-titan-text-muted sm:text-xs">

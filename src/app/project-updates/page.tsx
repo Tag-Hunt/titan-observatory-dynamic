@@ -107,7 +107,6 @@ export default async function ProjectUpdatesPage() {
           topics.map((topic, index) => (
             <AnimatedSection
               key={topic.id}
-              delay={index * 0.08}
               className="space-y-5 rounded-3xl border border-titan-border/60 bg-titan-bg-alt/90 p-6 shadow-[0_14px_34px_-24px_rgba(8,12,24,0.8)] backdrop-blur-sm transition hover:border-titan-purple/40 hover:bg-titan-bg-alt/95 sm:p-8"
             >
               <div className="flex flex-wrap items-center gap-3 text-sm text-titan-text-muted">

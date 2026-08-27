@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { IconBrandLinkedin, IconUser } from "@tabler/icons-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
@@ -146,10 +145,9 @@ export default function MeetTheTeamPage() {
         </AnimatedSection>
 
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member) => (
             <AnimatedSection
               key={member.name}
-              delay={index * 0.08}
               className="flex h-full flex-col gap-3 rounded-3xl border border-titan-border/60 bg-titan-bg-alt/90 p-6 text-sm leading-relaxed text-titan-text-primary/90 shadow-[0_14px_34px_-24px_rgba(8,12,24,0.8)] backdrop-blur-sm transition hover:-translate-y-1 hover:border-titan-purple/40 hover:bg-titan-bg-alt/95"
             >
               {member.image ? (

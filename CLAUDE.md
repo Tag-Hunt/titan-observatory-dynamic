@@ -4,17 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Titan Observatory is a **Next.js 16 (App Router)** website for a community radio telescope observatory. It features donation integration (Givebutter), newsletter signup (Brevo), real-time Discord presence, blog posts backed by PostgreSQL/Prisma, and accessibility controls (animation toggle, text size).
+Titan Observatory is a **Next.js 16 (App Router)** website for a community radio telescope observatory. It features Givebutter donation and newsletter widgets, live Discord presence, interactive radio-astronomy educational content, and accessibility controls.
 
 ## Commands
 
 ```bash
-npm run dev          # Start dev server (Turbopack enabled)
-npm run build        # Production build
-npm run start        # Start production server
-npm run lint         # ESLint via Next.js
-npm run prisma:studio # Open Prisma Studio for DB inspection
-npx prisma migrate dev --name <name>  # Run DB migrations
+npm run dev    # Start the development server
+npm run build  # Create a production build
+npm run start  # Start the production server
+npm run lint   # Run ESLint
 ```
 
 No test framework is configured.
@@ -23,64 +21,59 @@ No test framework is configured.
 
 ### Routing (App Router)
 
-Pages live in `src/app/`. Key routes: `/`, `/about`, `/team`, `/donate`, `/blog`, `/faq`, `/telescope-overview`, `/site-overview`, `/system-architecture`, `/project-updates`, `/thanks`.
+Pages live in `src/app/`. Key routes are `/`, `/team`, `/donate`, `/faq`, `/radio-astronomy`, `/hydrogen-line`, `/telescope-overview`, `/system-architecture`, `/project-updates`, `/privacy`, and `/terms`. `/volunteer` redirects to the external volunteer form.
 
 API routes in `src/app/api/`:
-- `GET /api/posts` — blog posts from Prisma/PostgreSQL
-- `POST /api/brevo` — newsletter signup (honeypot field `company`, double-opt-in)
-- `GET /api/discord-widget` — Discord guild stats (public widget + bot token fallback)
-- `GET /api/givebutter-messages` — paginated donor messages (up to 3 pages, max 20)
+
+- `GET /api/givebutter-messages` - paginated donor messages (up to 3 pages, max 20)
+
+### Educational Content
+
+- `src/app/radio-astronomy/` contains the radio-astronomy introduction.
+- `src/app/hydrogen-line/` contains the interactive hydrogen-line article and its scoped stylesheet.
+- `src/components/hydrogen-line/` contains the GSAP and SVG-based educational visualizations.
+- `src/lib/dopplerAnimation.ts`, `queueHeroSpectrum.ts`, and `queueSpectrumRaw.ts` provide the visualization math and spectrum data.
 
 ### Custom Color System
 
-All colors use CSS variables defined in `src/app/globals.css` under `:root` (dark theme default) and `[data-theme="sunrise"]`. Tailwind maps these via a `withOpacityValue` helper in `tailwind.config.js`. Always use `titan-*` color tokens (e.g., `bg-titan-bg`, `text-titan-text-primary`, `border-titan-border`). Semantic colors: `titan-red`, `titan-green`, `titan-blue`, `titan-yellow`, `titan-purple`, `titan-orange`, `titan-aqua`.
-
-Component-level utility classes are defined in `globals.css` component layer: `.titan-card`, `.titan-surface`, `.titan-input`, `.titan-button`, `.titan-section`.
+Colors use CSS variables defined in `src/app/globals.css` under `:root` and `[data-theme="sunrise"]`. Tailwind maps these through `withOpacityValue` in `tailwind.config.js`. Prefer `titan-*` tokens such as `bg-titan-bg`, `text-titan-text-primary`, and `border-titan-border`.
 
 ### Accessibility System
 
-- **Animation toggle:** localStorage key `titan:animations-disabled`, custom event `titan-animations-toggle`, CSS class `.animations-disabled`. Managed via `src/lib/animations.ts`.
-- **Text size toggle:** localStorage key `titan:text-size`, custom event `titan-text-size-toggle`, CSS class `.text-size-large` (112.5% base font). Managed via `src/lib/text-size.ts`.
-- Floating controls rendered in root layout via `FloatingAccessibilityControls`.
+- **Animation toggle:** localStorage key `titan:animations-disabled`, custom event `titan-animations-toggle`, CSS class `.animations-disabled`. Managed by `src/lib/animations.ts`.
+- **Text-size toggle:** localStorage key `titan:text-size`, custom event `titan-text-size-toggle`, CSS class `.text-size-large`. Managed by `src/lib/text-size.ts`.
+- Floating controls are rendered from the root layout through `FloatingAccessibilityControls`.
+- `src/lib/useVisibleAnimation.ts` pauses expensive educational animations outside the viewport.
 
-### Server vs Client Components
+### Server and Client Components
 
-- Root layout and data-fetching pages are Server Components (async)
-- Interactive components (`"use client"`): forms, carousels, animation toggles, navbar, accessibility controls
-- Framer Motion used for animations (respects the global animation toggle)
+- The root layout and data-fetching pages are Server Components.
+- Interactive components use `"use client"`.
+- Motion powers shared site animation; GSAP powers the hydrogen-atom visualization.
 
 ### Key Shared Utilities
 
-- `src/lib/utils.ts` — `cn()` function (clsx + tailwind-merge) for safe class merging
-- `src/lib/prisma.ts` — singleton Prisma client (dev logging enabled)
-- `src/components/AnimatedSection.tsx` — wrapper for scroll-triggered section animations
-- `src/components/ui/` — custom UI primitives (background-gradient, shooting-stars, stars-background, timeline, tracing-beam, concept-glow-panel, resizable-navbar)
+- `src/lib/utils.ts` - `cn()` helper using clsx and tailwind-merge
+- `src/lib/site.ts` - canonical site metadata and absolute URL generation
+- `src/components/AnimatedSection.tsx` - scroll-triggered section wrapper
+- `src/components/ui/` - active shared visual primitives
 
 ### Path Alias
 
-`@/*` maps to `./src/*` (configured in tsconfig.json).
+`@/*` maps to `./src/*` in `tsconfig.json`.
 
 ## Environment Variables
 
-```
-DATABASE_URL=postgresql://...
+```text
+NEXT_PUBLIC_SITE_URL=https://titanobservatory.org
 DISCORD_GUILD_ID=
 DISCORD_BOT_TOKEN=
 GIVEBUTTER_API_KEY=
-BREVO_API_KEY=
-BREVO_LIST_ID=
-BREVO_DOI_TEMPLATE_ID=
-BREVO_DOI_REDIRECT_URL=https://yourdomain.org/thanks
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-...
 ```
 
 ## External Integrations
 
-- **Givebutter:** Donation widget (custom element from CDN script) + REST API for donor messages
-- **Brevo (Sendinblue):** Double-opt-in newsletter flow
-- **Discord:** Public widget API with bot token fallback for member/presence counts
-- **Google Analytics:** Route-based tracking via `src/components/GoogleAnalytics.tsx`
-
-## Prisma Schema
-
-Two models in `prisma/schema.prisma`: `User` (email, password) and `Post` (title, slug, content, author relation). PostgreSQL backend.
+- **Givebutter:** Donation/newsletter widgets and donor-message API
+- **Discord:** Public widget API with a bot-token fallback, accessed server-side
+- **Google Analytics:** Route-based tracking through `GoogleAnalytics.tsx`

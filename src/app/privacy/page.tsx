@@ -106,10 +106,7 @@ export default function PrivacyPage() {
             </p>
             <ul className="ml-5 list-disc space-y-1.5">
               <li>
-                <strong>Givebutter</strong> — donation processing and donor messaging.
-              </li>
-              <li>
-                <strong>Brevo (Sendinblue)</strong> — newsletter delivery and email list management.
+                <strong>Givebutter</strong> — donation processing, donor messaging, and newsletter signups.
               </li>
               <li>
                 <strong>Google Analytics</strong> — anonymized website traffic analysis.

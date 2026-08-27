@@ -67,6 +67,7 @@ export default function Footer() {
               rel="noreferrer"
               className="shrink-0 rounded-lg border border-titan-border/60 bg-titan-bg-alt/60 p-1.5 transition hover:border-titan-orange/60"
             >
+              {/* eslint-disable-next-line @next/next/no-img-element -- Candid serves this third-party badge as a remote widget asset. */}
               <img
                 alt=""
                 src="https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16551508/svg"

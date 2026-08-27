@@ -1,15 +1,14 @@
 # titan-observatory-dynamic
 
-Next.js, Tailwind, Prisma, NextAuth
+Titan Observatory's public website, built with Next.js, React, and Tailwind CSS.
 
-## copy the .env.example and fill out the real info
+## Local development
 
 ```bash
-cp .env.example .env
 npm install
-npx prisma migrate dev --name init
 npm run dev
 ```
 
 ## Deploy Notes
-Use Node 20+, a running PostgreSQL, and reverse-proxy with Nginx. Run `npm run build` then `npm start` (or use PM2).
+Use Node 20.9 or newer. Configure optional external integrations through
+environment variables, then run `npm run build` and `npm start`.
