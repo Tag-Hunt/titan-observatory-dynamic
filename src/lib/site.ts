@@ -18,7 +18,7 @@ export const siteName = "Titan Observatory";
 export const siteDescription =
   "A 501(c)(3) nonprofit bringing a 10-meter NASA-built radio telescope online as a remote observing platform open to students, researchers, and the public.";
 
-/** Absolute URL for a site-relative path, e.g. `absoluteUrl("/about")`. */
+/** Absolute URL for a site-relative path, e.g. `absoluteUrl("/donate")`. */
 export function absoluteUrl(path = "/"): string {
   return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 }

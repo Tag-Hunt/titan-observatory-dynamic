@@ -30,11 +30,14 @@ export default function Home() {
             <span className="text-titan-yellow"> open to everyone.</span>
           </h1>
           <p className="max-w-2xl text-[1.05rem] leading-8 text-titan-text-primary/90 sm:text-lg">
-            Our mission is to make radio astronomy more accessible than ever by
-            acquiring and modernizing real scientific instrumentation, building
-            an intuitive remote observing platform, and creating educational
-            experiences that let the public, students, and aspiring researchers
-            explore the universe through hands-on observation and data.
+Titan Observatory is a Florida-based nonprofit
+            with the mission to make radio astronomy more accessible than ever by building a remote observing platform and educational experiences that let the public, students, and aspiring researchers explore the universe through hands-on observation and data.
+          </p>
+          <p className="max-w-2xl text-[1.05rem] leading-8 text-titan-text-primary/90 sm:text-lg">
+            We believe it&apos;s important to give everyone the opportunity to
+            perform and understand their own observations of the universe, so that
+            we can all share in the excitement of future discoveries and feel
+            connected to the science behind them.
           </p>
           <div className="flex flex-col gap-4 pt-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <Link
@@ -44,10 +47,10 @@ export default function Home() {
               Support the Observatory
             </Link>
             <Link
-              href="/about"
+              href="/radio-astronomy"
               className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-titan-border/70 px-6 py-3.5 text-sm font-semibold text-titan-text-secondary transition hover:border-titan-orange/50 hover:bg-titan-orange/5 sm:w-auto"
             >
-              Learn More
+              What is radio astronomy?
             </Link>
           </div>
         </div>
@@ -68,66 +71,31 @@ export default function Home() {
         </BackgroundGradient>
       </section>
 
-      <section className="grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-        <div className="flex flex-col rounded-3xl border border-titan-border/60 bg-titan-bg-alt/80 p-6 backdrop-blur-sm sm:p-7">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-titan-orange sm:text-xs sm:tracking-[0.25em]">
-            Fund the mission
-          </p>
-          <h3 className="mt-4 text-xl font-semibold text-titan-text-secondary sm:text-lg">
-            Support the Observatory
-          </h3>
-          <p className="mt-3 flex-1 text-sm leading-7 text-titan-text-primary/80">
-            Every tax-deductible donation brings Titan closer to reality. Help
-            us make radio astronomy and hands-on science more accessible than
-            ever.
-          </p>
-          <Link
-            href="/donate"
-            className="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-titan-orange px-5 py-3 text-sm font-semibold text-titan-bg transition hover:brightness-110 sm:w-auto"
-          >
-            Donate
-          </Link>
-        </div>
-
-        <div className="flex flex-col rounded-3xl border border-titan-border/60 bg-titan-bg-alt/80 p-6 backdrop-blur-sm sm:p-7">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-titan-aqua sm:text-xs sm:tracking-[0.25em]">
-            Join the team
-          </p>
-          <h3 className="mt-4 text-xl font-semibold text-titan-text-secondary sm:text-lg">
-            Volunteer or Contribute
-          </h3>
-          <p className="mt-3 flex-1 text-sm leading-7 text-titan-text-primary/80">
-            RF engineering, signal processing, software, education writing,
-            administration - there&apos;s a role for many skill sets.
-          </p>
-          <a
-            href="https://forms.gle/MwwsctzD1G5woQAo6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-full border border-titan-aqua/60 bg-titan-aqua/15 px-5 py-3 text-sm font-semibold text-titan-text-secondary transition hover:bg-titan-aqua/25 sm:w-auto"
-          >
-            Apply to Volunteer
-          </a>
-        </div>
-
-        <div className="flex flex-col rounded-3xl border border-titan-border/60 bg-titan-bg-alt/80 p-6 backdrop-blur-sm sm:col-span-2 sm:p-7 lg:col-span-1">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-titan-yellow sm:text-xs sm:tracking-[0.25em]">
-            Explore the project
-          </p>
-          <h3 className="mt-4 text-xl font-semibold text-titan-text-secondary sm:text-lg">
-            Learn How It Works
-          </h3>
-          <p className="mt-3 flex-1 text-sm leading-7 text-titan-text-primary/80">
-            Our mission, the roadmap, telescope specifications, site plans,
-            and system architecture.
-          </p>
-          <Link
-            href="/about"
-            className="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-full border border-titan-purple/60 bg-titan-purple/15 px-5 py-3 text-sm font-semibold text-titan-text-secondary transition hover:bg-titan-purple/25 sm:w-auto"
-          >
-            About the Project
-          </Link>
-        </div>
+      <section id="why-it-matters" className="mx-auto max-w-3xl scroll-mt-24 space-y-5">
+        <h2 className="text-2xl font-semibold text-titan-text-secondary">
+          Why It Matters
+        </h2>
+        <p className="text-sm leading-relaxed text-titan-text-primary/90">
+          Much of our understanding of the universe beyond the solar system
+          comes from the properties of electromagnetic waves received from
+          space. But <em>how</em>? How can light tell us the composition of a
+          planet&apos;s atmosphere from hundreds of light-years away? Or that
+          some smudge in an image is a galaxy born near the dawn of the
+          universe, billions of years ago?
+        </p>
+        <p className="text-sm leading-relaxed text-titan-text-primary/90">
+          Radio astronomy covers the longest-wavelength end of that spectrum.
+          Titan Observatory will initially observe at the 21&thinsp;cm hydrogen
+          line (1420&thinsp;MHz), detecting the neutral hydrogen that permeates
+          the Milky Way, including mapping its rotation curve, one of the
+          first clues we had for the existence of dark matter.
+        </p>
+        <p className="text-sm leading-relaxed text-titan-text-primary/90">
+          By creating a more accessible and engaging way to experience radio
+          astronomy, we hope to inspire future astronomers and help curious
+          citizen scientists better understand what the electromagnetic spectrum
+          can tell us about the universe we live in.
+        </p>
       </section>
 
       <div className="-mt-4 -mb-4 sm:-mt-8 sm:-mb-14">
@@ -175,8 +143,8 @@ export default function Home() {
                   </strong>{" "}
                   The infrastructure will be designed from the start to be
                   scalable. Our team will work to integrate donated dishes over
-                  time, increasing 21-cm observation capacity and creating
-                  opportunities for amateur interferometry.
+                  time, increasing observation capacity and creating
+                  opportunities for advanced experiments.
                 </span>
               </li>
               <li className="flex gap-4">

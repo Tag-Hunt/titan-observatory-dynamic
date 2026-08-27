@@ -29,11 +29,11 @@ type Route = {
  */
 const routes: Route[] = [
   { path: "/", lastModified: "2026-07-13", changeFrequency: "weekly", priority: 1.0 },
-  { path: "/about", lastModified: "2026-08-26", changeFrequency: "monthly", priority: 0.9 },
   { path: "/donate", lastModified: "2026-03-31", changeFrequency: "monthly", priority: 0.9 },
   { path: "/project-updates", lastModified: "2026-06-03", changeFrequency: "weekly", priority: 0.8 },
   { path: "/telescope-overview", lastModified: "2026-03-31", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/site-overview", lastModified: "2026-03-31", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/radio-astronomy", lastModified: "2026-08-26", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/hydrogen-line", lastModified: "2026-08-26", changeFrequency: "monthly", priority: 0.8 },
   { path: "/system-architecture", lastModified: "2026-08-26", changeFrequency: "monthly", priority: 0.7 },
   { path: "/team", lastModified: "2026-05-15", changeFrequency: "monthly", priority: 0.6 },
   { path: "/faq", lastModified: "2026-03-31", changeFrequency: "monthly", priority: 0.6 },

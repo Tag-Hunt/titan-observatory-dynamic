@@ -43,7 +43,7 @@ export default function NewsletterThanksPage() {
         </p>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <Link
-            href="/about"
+            href="/#why-it-matters"
             className="text-sm font-semibold text-titan-text-secondary underline decoration-titan-border/60 underline-offset-2 transition hover:text-titan-yellow hover:decoration-titan-yellow"
           >
             Learn about the project &rarr;

@@ -6,14 +6,13 @@ import GivebutterWidget from "@/components/GivebutterWidget";
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   { label: "Team", href: "/team" },
   { label: "FAQ", href: "/faq" },
 ];
 
 const projectLinks = [
+  { label: "What Is Radio Astronomy?", href: "/radio-astronomy" },
   { label: "Telescope Overview", href: "/telescope-overview" },
-  { label: "Site Overview", href: "/site-overview" },
   { label: "System Architecture", href: "/system-architecture" },
   { label: "Updates", href: "/project-updates" },
 ];

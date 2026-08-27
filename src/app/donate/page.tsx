@@ -339,7 +339,7 @@ export default function DonatePage() {
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
-              href="/about"
+              href="/#why-it-matters"
               className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-titan-purple/70 bg-titan-purple px-6 py-3 text-sm font-semibold text-titan-text-secondary transition hover:bg-[#565b7a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-purple sm:w-auto"
             >
               Learn About the Project

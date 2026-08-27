@@ -33,15 +33,15 @@ export default function Navbar() {
   const navItems = useMemo(
     () => [
       { name: "Home", link: "/" },
-      { name: "About", link: "/about" },
       { name: "Updates", link: "/project-updates" },
       { name: "Team", link: "/team" },
       { name: "FAQ", link: "/faq" },
       {
         name: "More",
         children: [
+          { name: "What Is Radio Astronomy?", link: "/radio-astronomy" },
           { name: "Telescope Overview", link: "/telescope-overview" },
-          { name: "Site Overview", link: "/site-overview" },
+          { name: "The Hydrogen Line", link: "/hydrogen-line" },
           { name: "System Architecture", link: "/system-architecture" },
         ],
       },
