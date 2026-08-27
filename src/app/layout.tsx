@@ -1,10 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 
-import Navbar from "@/components/Navbar";
 import ClientEnhancements from "@/components/ClientEnhancements";
-import SiteHeader from "@/components/SiteHeader";
-import Footer from "@/components/Footer";
+import RouteShell from "@/components/RouteShell";
 import { siteDescription, siteName, siteUrl } from "@/lib/site";
 import "./globals.css";
 import "react-photo-view/dist/react-photo-view.css";
@@ -49,12 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </>
         ) : null}
         <ClientEnhancements measurementId={GA_MEASUREMENT_ID} />
-        <div className="relative z-10 flex min-h-screen flex-col" data-page-root>
-          <SiteHeader />
-          <Navbar />
-          <main className="mx-auto w-full max-w-6xl flex-1 px-5 pt-6 pb-16 sm:px-6 sm:pt-8 sm:pb-12 lg:px-8">{children}</main>
-          <Footer />
-        </div>
+        <RouteShell>{children}</RouteShell>
       </body>
     </html>
   );

@@ -25,14 +25,17 @@ export default function ClientEnhancements({
   measurementId?: string;
 }) {
   const pathname = usePathname();
+  const isStandaloneLegalPage = pathname === "/terms" || pathname === "/privacy";
 
   return (
     <>
-      <SectionReveals pathname={pathname} />
+      {isStandaloneLegalPage ? null : <SectionReveals pathname={pathname} />}
       <GivebutterConversionTracker />
-      <DecorativeEffects showShootingStars={pathname === "/"} />
+      {isStandaloneLegalPage ? null : (
+        <DecorativeEffects showShootingStars={pathname === "/"} />
+      )}
       {measurementId ? <GoogleAnalytics measurementId={measurementId} /> : null}
-      <FloatingAccessibilityControls />
+      {isStandaloneLegalPage ? null : <FloatingAccessibilityControls />}
     </>
   );
 }

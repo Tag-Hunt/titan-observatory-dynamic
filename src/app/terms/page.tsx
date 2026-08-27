@@ -1,170 +1,155 @@
 import type { Metadata } from "next";
-import AnimatedSection from "@/components/AnimatedSection";
+import Link from "next/link";
 
-export const revalidate = 86400;
+import LegalPageLayout from "@/components/LegalPageLayout";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description:
-    "Terms of Service for the Titan Observatory website and online platform.",
+  title: "Terms and Conditions",
+  description: "Terms governing use of the Titan Observatory platform.",
 };
-
-const lastUpdated = "April 3, 2026";
-const contactEmail = "contact@titanobservatory.org";
-const orgName = "Titan Astronomical Observatory Inc.";
-const website = "titanobservatory.org";
 
 export default function TermsPage() {
   return (
-    <main className="relative z-10">
-      <div className="mx-auto w-full max-w-3xl space-y-14">
-        {/* Header */}
-        <header className="space-y-3">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-titan-orange sm:text-xs sm:tracking-[0.25em]">
-            Legal
-          </p>
-          <h1 className="text-4xl font-bold text-titan-text-secondary sm:text-5xl">
-            Terms of Service
-          </h1>
-          <p className="text-sm text-titan-text-muted">Last updated: {lastUpdated}</p>
-        </header>
+    <LegalPageLayout
+      current="terms"
+      title="Terms and Conditions"
+      summary="These terms govern your account and use of the Titan Observatory platform."
+    >
+      <section>
+        <h2>1. Agreement</h2>
+        <p>
+          These Terms and Conditions (“Terms”) are an agreement between you and
+          Titan Observatory, a Florida-based 501(c)(3) nonprofit (“Titan,” “we,”
+          “us,” or “our”). They apply to the Titan Platform and related services
+          (the “Service”). By creating an account or using the Service, you agree to
+          these Terms and acknowledge our <Link href="/privacy">Privacy Policy</Link>.
+        </p>
+      </section>
 
-        <AnimatedSection className="prose-like space-y-10 text-sm leading-7 text-titan-text-primary/85">
+      <section>
+        <h2>2. Accounts and eligibility</h2>
+        <p>
+          You must be at least 13 years old to create an account. If you are under
+          the age of legal majority where you live, a parent or guardian must agree
+          to these Terms for you. Children under 13 may participate only through an
+          authorized school or parental-consent program.
+        </p>
+        <p>
+          Keep your account information accurate and your login credentials secure.
+          You are responsible for activity through your account and should notify us
+          if you suspect unauthorized use.
+        </p>
+      </section>
 
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">1. Acceptance of Terms</h2>
-            <p>
-              By accessing or using the {website} website and any associated services (collectively, the
-              &ldquo;Services&rdquo;), you agree to be bound by these Terms of Service
-              (&ldquo;Terms&rdquo;). If you do not agree to these Terms, please do not use the Services.
-              These Terms apply to all visitors, users, and anyone else who accesses or uses the Services.
-            </p>
-          </section>
+      <section>
+        <h2>3. Using the Service</h2>
+        <p>
+          Titan provides educational resources and access to radio astronomy tools.
+          Telescope availability, schedules, capabilities, and data quality may
+          change because of weather, maintenance, safety requirements, interference,
+          or other operational needs. We may delay, interrupt, or cancel an
+          observation when reasonably necessary.
+        </p>
+        <p>You may not:</p>
+        <ul>
+          <li>Use the Service unlawfully or to harm, harass, or deceive others.</li>
+          <li>Access another person’s account or non-public data.</li>
+          <li>Bypass security, permissions, safety controls, or operating limits.</li>
+          <li>Disrupt the Service or submit commands that could damage equipment.</li>
+          <li>Upload malware or infringing, confidential, or otherwise unlawful material.</li>
+        </ul>
+        <p>
+          Follow all displayed instructions and staff directions when scheduling or
+          controlling observatory equipment.
+        </p>
+      </section>
 
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">2. About Titan Observatory</h2>
-            <p>
-              {orgName} (&ldquo;Titan Observatory,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or
-              &ldquo;our&rdquo;) is a 501(c)(3) nonprofit organization based in Polk County, Florida.
-              Our mission is to enable the public to perform real radio astronomy experiments using
-              professional instrumentation through an accessible online platform.
-            </p>
-          </section>
+      <section>
+        <h2>4. Credits, payments, and donations</h2>
+        <p>
+          Paid features may use hour credits, memberships, or other purchases. Prices,
+          usage rates, renewal terms, and applicable refund rules will be shown before
+          purchase. Unless stated otherwise or required by law, credits have no cash
+          value and are non-transferable.
+        </p>
+        <p>
+          Observation-credit purchases are not charitable contributions unless they
+          are expressly identified as donations. Payment processors may apply their
+          own terms and privacy policies. The purchase and use of observation credits
+          are also governed by our{" "}
+          <a href="https://app.titanobservatory.org/observation-credit-terms">
+            Observation Credit Terms
+          </a>
+          .
+        </p>
+      </section>
 
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">3. Use of the Services</h2>
-            <p>You agree to use the Services only for lawful purposes and in accordance with these Terms. You agree not to:</p>
-            <ul className="ml-5 list-disc space-y-1.5">
-              <li>Use the Services in any way that violates applicable federal, state, local, or international law or regulation.</li>
-              <li>Transmit any unsolicited or unauthorized advertising or promotional material.</li>
-              <li>Attempt to gain unauthorized access to any portion of the Services or any systems or networks connected to the Services.</li>
-              <li>Interfere with or disrupt the integrity or performance of the Services.</li>
-              <li>Use any automated means, including bots or scrapers, to access the Services without our prior written consent.</li>
-              <li>Impersonate or misrepresent your affiliation with any person or organization.</li>
-            </ul>
-          </section>
+      <section>
+        <h2>5. Content and observation data</h2>
+        <p>
+          You keep any rights you hold in material you submit. You give Titan a
+          non-exclusive, royalty-free license to host, process, and display that
+          material as needed to provide and improve the Service.
+        </p>
+        <p>
+          Titan may make some observation data available for educational or scientific
+          use. Do not include personal, confidential, or sensitive information in
+          observation names, plans, or other submissions. Unless Titan expressly says
+          material is confidential, you should not assume that it is.
+        </p>
+        <p>
+          Titan owns or licenses the Service, its branding, and its content. You may
+          use them only as permitted by the Service or an applicable open-source or
+          content license.
+        </p>
+      </section>
 
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">4. Intellectual Property</h2>
-            <p>
-              The content on the Services&mdash;including text, graphics, logos, images, audio, and
-              software&mdash;is the property of {orgName} or its content suppliers and is protected by
-              applicable copyright and intellectual property laws. You may not reproduce, distribute,
-              modify, create derivative works of, publicly display, or exploit any content from the
-              Services without our express written permission, except as permitted by applicable law.
-            </p>
-            <p>
-              Observation data and educational materials we publish are made available for personal,
-              educational, and non-commercial research use. Please credit Titan Observatory when
-              referencing our published datasets.
-            </p>
-          </section>
+      <section>
+        <h2>6. Suspension and third-party services</h2>
+        <p>
+          We may restrict or suspend access to protect users or equipment, enforce
+          these Terms, comply with law, address nonpayment, or discontinue a feature.
+          The Service may link to third-party services such as identity providers,
+          payment processors, or sky surveys. Those services are governed by their
+          own terms, and Titan is not responsible for them.
+        </p>
+      </section>
 
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">5. Donations</h2>
-            <p>
-              Donations made through the Services are processed by third-party payment providers. All
-              donations to {orgName} are tax-deductible to the extent permitted by law. We are not
-              responsible for the privacy practices or terms of any third-party payment processor. By
-              making a donation you authorize the applicable payment processor to charge the amount you
-              specify. All donations are final unless otherwise required by law.
-            </p>
-          </section>
+      <section>
+        <h2>7. Disclaimers and liability</h2>
+        <p>
+          To the fullest extent permitted by law, the Service is provided “as is” and
+          “as available.” We do not guarantee uninterrupted access, successful
+          observations, permanent storage, or the accuracy or fitness of educational
+          content or observation data for a particular purpose.
+        </p>
+        <p>
+          To the fullest extent permitted by law, Titan and its personnel will not be
+          liable for indirect, incidental, special, or consequential damages arising
+          from the Service. Titan’s total liability will not exceed the greater of
+          $100 or the amount you paid Titan for the Service during the 12 months before
+          the claim. These limits do not apply where prohibited by law.
+        </p>
+      </section>
 
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">6. Newsletter and Communications</h2>
-            <p>
-              If you subscribe to our newsletter, you consent to receive periodic email communications
-              from us about project milestones, fundraising campaigns, and major announcements. You may
-              unsubscribe at any time by clicking the unsubscribe link in any email or by contacting us
-              at <a className="text-titan-yellow underline-offset-4 hover:underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>.
-            </p>
-          </section>
-
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">7. Third-Party Links and Services</h2>
-            <p>
-              The Services may contain links to third-party websites, community forums, social media
-              platforms, or other external services. These links are provided for convenience only. We
-              do not endorse, control, or assume responsibility for the content, privacy policies, or
-              practices of any third-party sites or services. We encourage you to review the terms and
-              privacy policies of any third-party sites you visit.
-            </p>
-          </section>
-
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">8. Disclaimer of Warranties</h2>
-            <p>
-              THE SERVICES ARE PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS
-              WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-              IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR
-              NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE,
-              OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
-            </p>
-          </section>
-
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">9. Limitation of Liability</h2>
-            <p>
-              TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, {orgName.toUpperCase()} AND ITS
-              OFFICERS, DIRECTORS, EMPLOYEES, AND VOLUNTEERS SHALL NOT BE LIABLE FOR ANY INDIRECT,
-              INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR
-              USE OF, OR INABILITY TO USE, THE SERVICES, EVEN IF WE HAVE BEEN ADVISED OF THE
-              POSSIBILITY OF SUCH DAMAGES.
-            </p>
-          </section>
-
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">10. Changes to These Terms</h2>
-            <p>
-              We may revise these Terms from time to time. When we do, we will update the &ldquo;Last
-              updated&rdquo; date at the top of this page. Your continued use of the Services after any
-              changes constitutes your acceptance of the revised Terms. We encourage you to review this
-              page periodically.
-            </p>
-          </section>
-
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">11. Governing Law</h2>
-            <p>
-              These Terms shall be governed by and construed in accordance with the laws of the State of
-              Florida, without regard to its conflict of law provisions. Any disputes arising under
-              these Terms shall be subject to the exclusive jurisdiction of the courts located in Polk
-              County, Florida.
-            </p>
-          </section>
-
-          <section className="space-y-3">
-            <h2 className="text-base font-semibold text-titan-text-secondary">12. Contact Us</h2>
-            <p>
-              If you have questions about these Terms, please contact us at{" "}
-              <a className="text-titan-yellow underline-offset-4 hover:underline" href={`mailto:${contactEmail}`}>
-                {contactEmail}
-              </a>.
-            </p>
-          </section>
-        </AnimatedSection>
-      </div>
-    </main>
+      <section>
+        <h2>8. Changes, disputes, and contact</h2>
+        <p>
+          We may update these Terms by posting a revised version and updating the date
+          above. We will provide additional notice if a change materially affects your
+          rights. If you do not agree to revised Terms, stop using the Service.
+        </p>
+        <p>
+          Florida law governs these Terms. Unless applicable law requires otherwise,
+          disputes must be brought in the state or federal courts serving Polk County,
+          Florida. If any part of these Terms is unenforceable, the remaining parts
+          remain in effect.
+        </p>
+        <p>
+          Questions may be sent to Titan Observatory through our{" "}
+          <a href="https://titanobservatory.org/contact">public contact page</a>.
+        </p>
+      </section>
+    </LegalPageLayout>
   );
 }
