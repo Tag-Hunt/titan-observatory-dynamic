@@ -134,7 +134,7 @@ export default function PrivacyPolicyPage() {
         </p>
         <p>
           For privacy questions or requests, contact Titan Observatory through our{" "}
-          <a href="https://app.titanobservatory.org/contact">public contact page</a>.
+          <a href="/contact">public contact page</a>.
         </p>
       </section>
     </LegalPageLayout>

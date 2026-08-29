@@ -143,10 +143,10 @@ export default function FaqPage() {
                 Visit the Forum
               </a>
               <a
-                href="mailto:contact@titanobservatory.org"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-titan-border/70 px-6 py-3 text-sm font-semibold text-titan-text-secondary transition hover:border-titan-blue/50 hover:bg-titan-blue/5"
               >
-                Email Us
+                Contact Us
               </a>
             </div>
           </AnimatedSection>

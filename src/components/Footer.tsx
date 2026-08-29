@@ -8,10 +8,10 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Team", href: "/team" },
   { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const projectLinks = [
-  { label: "What Is Radio Astronomy?", href: "/radio-astronomy" },
   { label: "Telescope Overview", href: "/telescope-overview" },
   { label: "System Architecture", href: "/system-architecture" },
   { label: "Updates", href: "/project-updates" },

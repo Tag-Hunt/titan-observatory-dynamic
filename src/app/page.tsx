@@ -46,12 +46,6 @@ Titan Observatory is a Florida-based nonprofit
             >
               Support the Observatory
             </Link>
-            <Link
-              href="/radio-astronomy"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-titan-border/70 px-6 py-3.5 text-sm font-semibold text-titan-text-secondary transition hover:border-titan-orange/50 hover:bg-titan-orange/5 sm:w-auto"
-            >
-              What is radio astronomy?
-            </Link>
             <DiscordPresenceBadge className="w-full sm:w-auto" />
           </div>
         </div>

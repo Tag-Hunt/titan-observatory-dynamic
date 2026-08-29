@@ -39,10 +39,10 @@ export default function Navbar() {
       {
         name: "More",
         children: [
-          { name: "What Is Radio Astronomy?", link: "/radio-astronomy" },
           { name: "Telescope Overview", link: "/telescope-overview" },
           { name: "The Hydrogen Line", link: "/hydrogen-line" },
           { name: "System Architecture", link: "/system-architecture" },
+          { name: "Contact", link: "/contact" },
         ],
       },
     ],
