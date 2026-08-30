@@ -77,9 +77,9 @@ export default function TermsPage() {
           are expressly identified as donations. Payment processors may apply their
           own terms and privacy policies. The purchase and use of observation credits
           are also governed by our{" "}
-          <a href="https://app.titanobservatory.org/observation-credit-terms">
+          <Link href="/observation-credit-terms">
             Observation Credit Terms
-          </a>
+          </Link>
           .
         </p>
       </section>

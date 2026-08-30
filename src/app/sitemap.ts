@@ -37,6 +37,12 @@ const routes: Route[] = [
   { path: "/faq", lastModified: "2026-03-31", changeFrequency: "monthly", priority: 0.6 },
   { path: "/contact", lastModified: "2026-08-27", changeFrequency: "yearly", priority: 0.6 },
   { path: "/terms", lastModified: "2026-04-03", changeFrequency: "yearly", priority: 0.3 },
+  {
+    path: "/observation-credit-terms",
+    lastModified: "2026-08-09",
+    changeFrequency: "yearly",
+    priority: 0.3,
+  },
   { path: "/privacy", lastModified: "2026-04-03", changeFrequency: "yearly", priority: 0.3 },
 ];
 

@@ -7,7 +7,11 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import SiteHeader from "@/components/SiteHeader";
 
-const standaloneLegalRoutes = new Set(["/terms", "/privacy"]);
+const standaloneLegalRoutes = new Set([
+  "/terms",
+  "/observation-credit-terms",
+  "/privacy",
+]);
 
 export default function RouteShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();

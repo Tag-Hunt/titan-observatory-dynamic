@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 
 interface LegalPageLayoutProps {
-  current: "terms" | "privacy";
+  current: "terms" | "observation-credits" | "privacy";
   title: string;
   summary: string;
   lastUpdated?: string;
@@ -19,7 +19,7 @@ const legalDocuments = [
   {
     id: "observation-credits",
     label: "Observation Credit Terms",
-    href: "https://app.titanobservatory.org/observation-credit-terms",
+    href: "/observation-credit-terms",
   },
   { id: "privacy", label: "Privacy Policy", href: "/privacy" },
 ] as const;

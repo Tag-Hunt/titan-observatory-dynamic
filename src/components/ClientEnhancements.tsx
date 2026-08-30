@@ -25,7 +25,10 @@ export default function ClientEnhancements({
   measurementId?: string;
 }) {
   const pathname = usePathname();
-  const isStandaloneLegalPage = pathname === "/terms" || pathname === "/privacy";
+  const isStandaloneLegalPage =
+    pathname === "/terms" ||
+    pathname === "/observation-credit-terms" ||
+    pathname === "/privacy";
 
   return (
     <>
