@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import DeferredDonorMessageCarousel from "@/components/DeferredDonorMessageCarousel";
+import DemoTelescopeFigure from "@/components/DemoTelescopeFigure";
 import GivebutterWidget from "@/components/GivebutterWidget";
 
 export const revalidate = 3600;
@@ -14,22 +15,22 @@ export const metadata: Metadata = {
 
 const enabledFeatures = [
   {
-    emoji: "📡",
+    emoji: "📐",
     iconClass: "bg-titan-orange/15 text-titan-orange",
-    title: "Broader Frequency Coverage",
-    body: "Pending dish characterization, we hope to add L- and S-band RF chains alongside the 21 cm hydrogen line feed, opening up a wider range of science targets and educational experiments.",
+    title: "Getting the Site Ready",
+    body: "Surveying, site planning, and the design work needed to build the first telescope pad and bring the 2.3-meter dish online.",
   },
   {
-    emoji: "🔭",
+    emoji: "📡",
     iconClass: "bg-titan-aqua/15 text-titan-aqua",
-    title: "A Network of Dishes",
-    body: "The infrastructure will be designed from the start to be scalable. Our team will work to integrate donated dishes over time, increasing observation capacity and creating opportunities for amateur interferometry.",
+    title: "A Working Telescope Under Open Sky",
+    body: "Our 2.3-meter hydrogen-line dish already works; what it lacks is an unobstructed horizon. A pad, a fenced enclosure, solar power, connectivity, and safety interlocks turn it into the first instrument the public can actually book.",
   },
   {
     emoji: "🎓",
     iconClass: "bg-titan-yellow/15 text-titan-yellow",
-    title: "Integrated Science Education",
-    body: "Once routine observations are underway, we plan to develop curricula that put real telescope time in students' hands, covering the electromagnetic spectrum, cosmic radio sources, and how a radio telescope works from first principles.",
+    title: "Curriculum and Student Hours",
+    body: "Learning modules that take someone from no background to a real observation, plus a donated student-hours pool so a classroom's access does not depend on its budget.",
   },
 ] as const;
 
@@ -56,9 +57,11 @@ export default function DonatePage() {
               Help Build the Observatory
             </h1>
             <p className="max-w-xl text-[1.05rem] leading-8 text-titan-text-primary/90 sm:text-lg">
-              Titan Observatory is a 501(c)(3) nonprofit. Every tax-deductible
-              donation goes directly toward building a 10-meter radio telescope
-              that will be open to students, educators, and the public.
+              Titan Observatory is a 501(c)(3) nonprofit building a network of
+              radio telescopes open to students, educators, and the public. We
+              already have a working hydrogen-line telescope and a live observing
+              platform. Your tax-deductible donation funds what stands between
+              those and a telescope anyone can book: the site.
             </p>
           </div>
 
@@ -283,10 +286,11 @@ export default function DonatePage() {
             What Your Support Enables
           </h2>
           <p className="mx-auto max-w-2xl text-sm leading-7 text-titan-text-primary/90">
-            Every dollar goes directly toward expert consultations, site
-            evaluation, and planning work. Once we have enough professional input
-            to confirm the viability of the project, more detailed plans will be
-            shared publicly before funds are used to acquire the telescope.
+            Right now, every dollar goes toward professional consultations, site
+            evaluation, and planning work &mdash; the survey, interference baseline,
+            and permitting guidance that have to come before anything is built. We
+            publish detailed plans before funds are committed to a major
+            acquisition, not after.
           </p>
         </div>
 
@@ -310,6 +314,8 @@ export default function DonatePage() {
             </div>
           ))}
         </div>
+
+        <DemoTelescopeFigure />
       </section>
 
       <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start lg:gap-8">
@@ -339,10 +345,10 @@ export default function DonatePage() {
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
-              href="/#why-it-matters"
+              href="/science"
               className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-titan-purple/70 bg-titan-purple px-6 py-3 text-sm font-semibold text-titan-text-secondary transition hover:bg-[#565b7a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-titan-purple sm:w-auto"
             >
-              Learn About the Project
+              See the Roadmap
             </Link>
             <Link
               href="/faq"

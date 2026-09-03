@@ -8,6 +8,17 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  async redirects() {
+    return [
+      {
+        // `/telescope-overview` was retired; its instrument content now lives
+        // on the Science & Roadmap page.
+        source: "/telescope-overview",
+        destination: "/science",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

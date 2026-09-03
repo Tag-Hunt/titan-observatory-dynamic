@@ -27,14 +27,14 @@ type Route = {
  *  - `/api/*`     also disallowed in robots.ts
  */
 const routes: Route[] = [
-  { path: "/", lastModified: "2026-07-13", changeFrequency: "weekly", priority: 1.0 },
-  { path: "/donate", lastModified: "2026-03-31", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/", lastModified: "2026-09-03", changeFrequency: "weekly", priority: 1.0 },
+  { path: "/donate", lastModified: "2026-09-03", changeFrequency: "monthly", priority: 0.9 },
   { path: "/project-updates", lastModified: "2026-06-03", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/telescope-overview", lastModified: "2026-03-31", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/science", lastModified: "2026-09-03", changeFrequency: "monthly", priority: 0.8 },
   { path: "/hydrogen-line", lastModified: "2026-08-26", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/system-architecture", lastModified: "2026-08-26", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/system-architecture", lastModified: "2026-09-03", changeFrequency: "monthly", priority: 0.7 },
   { path: "/team", lastModified: "2026-05-15", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/faq", lastModified: "2026-03-31", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/faq", lastModified: "2026-09-03", changeFrequency: "monthly", priority: 0.6 },
   { path: "/contact", lastModified: "2026-08-27", changeFrequency: "yearly", priority: 0.6 },
   { path: "/terms", lastModified: "2026-04-03", changeFrequency: "yearly", priority: 0.3 },
   {

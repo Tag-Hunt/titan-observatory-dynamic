@@ -12,7 +12,7 @@ const quickLinks = [
 ];
 
 const projectLinks = [
-  { label: "Telescope Overview", href: "/telescope-overview" },
+  { label: "Science & Roadmap", href: "/science" },
   { label: "System Architecture", href: "/system-architecture" },
   { label: "Updates", href: "/project-updates" },
 ];

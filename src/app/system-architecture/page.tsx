@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DiagramViewer from "./DiagramViewer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { cn } from "@/lib/utils";
@@ -116,9 +117,8 @@ export default function SystemArchitecturePage() {
         </p>
         <h1 className="text-3xl font-bold text-titan-text-secondary sm:text-4xl">System Architecture</h1>
         <p className="max-w-3xl text-sm leading-relaxed text-titan-text-primary/90">
-          This is an early draft of our telescope control and data system architecture. It will evolve as we build and
-          gather feedback. We&apos;ll publish the services on GitHub under an open-source license so you can browse the
-          code and contribute improvements.
+          Between an observer on the internet and an on-site telescope sits a stack of services
+          that has to coordinate the request, keep the hardware within its limits, capture and validate the signal, and present it in a useful format. This page gives a high-level overview of how that stack is designed.
         </p>
       </header>
 

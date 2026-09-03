@@ -21,7 +21,7 @@ No test framework is configured.
 
 ### Routing (App Router)
 
-Pages live in `src/app/`. Key routes are `/`, `/team`, `/donate`, `/faq`, `/radio-astronomy`, `/hydrogen-line`, `/telescope-overview`, `/system-architecture`, `/project-updates`, `/privacy`, and `/terms`. `/volunteer` redirects to the external volunteer form.
+Pages live in `src/app/`. Key routes are `/`, `/team`, `/donate`, `/faq`, `/science`, `/hydrogen-line`, `/system-architecture`, `/project-updates`, `/contact`, `/privacy`, and `/terms`. `/volunteer` redirects to the external volunteer form, and `/telescope-overview` permanently redirects to `/science` (see `next.config.ts`).
 
 API routes in `src/app/api/`:
 
@@ -29,7 +29,7 @@ API routes in `src/app/api/`:
 
 ### Educational Content
 
-- `src/app/radio-astronomy/` contains the radio-astronomy introduction.
+- `src/app/science/` contains the Science & Roadmap page: observing capabilities, instrument network, site and signal-chain design, data policy, and future priorities. Every capability and instrument carries an explicit status so the page never implies a capability Titan does not have.
 - `src/app/hydrogen-line/` contains the interactive hydrogen-line article and its scoped stylesheet.
 - `src/components/hydrogen-line/` contains the GSAP and SVG-based educational visualizations.
 - `src/lib/dopplerAnimation.ts`, `queueHeroSpectrum.ts`, and `queueSpectrumRaw.ts` provide the visualization math and spectrum data.

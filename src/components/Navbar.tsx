@@ -39,7 +39,7 @@ export default function Navbar() {
       {
         name: "More",
         children: [
-          { name: "Telescope Overview", link: "/telescope-overview" },
+          { name: "Science & Roadmap", link: "/science" },
           { name: "The Hydrogen Line", link: "/hydrogen-line" },
           { name: "System Architecture", link: "/system-architecture" },
           { name: "Contact", link: "/contact" },
