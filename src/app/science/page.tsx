@@ -192,52 +192,7 @@ export default function SciencePage() {
         <h1 className="text-3xl font-bold text-titan-text-secondary sm:text-4xl">
           Science &amp; Roadmap
         </h1>
-        <p className="max-w-3xl text-sm leading-7 text-titan-text-primary/90">
-          This page is the unvarnished version of what Titan Observatory can do. Every capability and
-          instrument below carries a status, because the difference between{" "}
-          <em>working today</em> and <em>intended later</em> is the most useful thing we can tell
-          you. If you are new to radio astronomy, start with the primer directly below. If you
-          already know the field, the instrument and site sections are where the detail is.
-        </p>
       </header>
-
-      {/* Beginner primer */}
-      <AnimatedSection className="rounded-3xl border border-titan-border/50 bg-titan-bg-alt/60 p-7 backdrop-blur-sm sm:p-8">
-        <div className="mx-auto max-w-3xl space-y-5">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-titan-text-muted sm:text-xs sm:tracking-[0.25em]">
-            New to this?
-          </p>
-          <h2 className="text-2xl font-semibold text-titan-text-secondary">
-            What a radio telescope actually does
-          </h2>
-          <p className="text-sm leading-7 text-titan-text-primary/90">
-            Visible light is one narrow slice of the electromagnetic spectrum. Radio waves are the
-            same phenomenon at much longer wavelengths, and the universe is full of them. They pass
-            straight through the dust clouds that block visible light, they arrive day and night, and
-            they carry information no optical telescope can collect.
-          </p>
-          <p className="text-sm leading-7 text-titan-text-primary/90">
-            A radio telescope is not a camera. The dish is a collector: it focuses incoming radio
-            waves onto a single sensitive receiver, the signal is amplified and digitized, and what
-            comes out is a{" "}
-            <strong className="font-semibold text-titan-text-secondary">spectrum</strong> &mdash; a
-            graph of how much energy arrives at each frequency. Learning to read that graph is the
-            whole skill, and it is genuinely learnable in an afternoon.
-          </p>
-          <p className="text-sm leading-7 text-titan-text-primary/90">
-            Here is why that graph is powerful. Atoms emit and absorb at exact, known frequencies. So
-            when you see a bump sitting slightly off from where it belongs, the source is moving
-            &mdash; and the size of the shift tells you how fast. That one idea is how we measure the
-            rotation of our own galaxy from the inside.
-          </p>
-          <Link
-            href="/hydrogen-line"
-            className="inline-flex items-center justify-center rounded-full border border-titan-yellow/50 bg-titan-yellow/10 px-6 py-3 text-sm font-semibold text-titan-text-secondary transition hover:bg-titan-yellow/20"
-          >
-            Read the full hydrogen line story
-          </Link>
-        </div>
-      </AnimatedSection>
 
       {/* Capabilities */}
       <section className="space-y-8">

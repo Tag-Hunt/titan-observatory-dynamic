@@ -290,7 +290,7 @@ export default function DonatePage() {
             evaluation, and planning work &mdash; the survey, interference baseline,
             and permitting guidance that have to come before anything is built. We
             publish detailed plans before funds are committed to a major
-            acquisition, not after.
+            acquisition.
           </p>
         </div>
 
