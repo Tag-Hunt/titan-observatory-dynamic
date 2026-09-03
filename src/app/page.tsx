@@ -57,9 +57,11 @@ export default function Home() {
             <span className="text-titan-yellow"> open to everyone.</span>
           </h1>
           <p className="max-w-2xl text-[1.05rem] leading-8 text-titan-text-primary/90 sm:text-lg">
-            Modern astronomy has evolved far beyond the days of looking up and the sky and describing what you see. These days it seems to be a stream of extraordinary conclusions, detached from
-            the measurements that produced them. Titan Observatory exists to close that gap: to let
-            anyone learn a concept, point a real telescope, and explore the universe with the eyes of a modern astronomer.
+            Modern astronomy has moved far beyond simply looking up at the sky and describing what
+            we see. Yet its discoveries often reach us as extraordinary conclusions, detached from
+            the measurements behind them. Titan Observatory exists to close that gap by giving anyone
+            the chance to learn a concept, point a real telescope, and explore the universe through
+            the eyes of a modern astronomer.
           </p>
           <div className="flex flex-col gap-4 pt-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <Link
