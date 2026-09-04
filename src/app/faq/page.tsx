@@ -22,9 +22,7 @@ const aboutFaqs = [
         Titan Astronomical Observatory, Inc. is a Florida 501(c)(3) nonprofit, founded in 2025 and
         based in Polk County. We are building a remotely accessible radio observatory paired with an
         online learning platform, so that anyone can learn a concept, run a real observation that
-        applies it, inspect the data, and understand what the measurement does and does not show. The
-        point is not telescope rental. It is showing people how astronomical claims are actually
-        derived.
+        applies it, inspect the data, and understand what the measurement does and does not show.
       </>
     ),
   },
@@ -32,7 +30,7 @@ const aboutFaqs = [
     question: "What already works, and what is still a plan?",
     answer: (
       <>
-        Working today: a 2.3-meter hydrogen-line telescope that has produced live detections in
+        We have a 2.3-meter hydrogen-line proof of concept that has produced live detections in
         demonstrations, and a functioning platform at{" "}
         <a
           className={linkClass}
@@ -42,21 +40,14 @@ const aboutFaqs = [
         >
           app.titanobservatory.org
         </a>{" "}
-        with accounts, learning modules, guided observing, an advanced observation planner, a
-        campaign scheduler, and simulated observations. Still ahead: the permanent site build, public
-        booking of a real instrument, the public data archive and API, and the larger dishes. Every
-        capability on the{" "}
-        <Link className={linkClass} href="/science">
-          Science &amp; Roadmap
-        </Link>{" "}
-        page is individually labelled so you can tell which is which.
+        with simulated observations, and learning modules being developed.
       </>
     ),
   },
   {
     question: "How is the project funded?",
     answer:
-      "Entirely through public donations and grants. There are no institutional backers or corporate sponsors at this time. We list organizations as partners only once there is a current contact and a written commitment, so you will not find a logo wall of people who once expressed interest.",
+      "Entirely through public donations and grants. There are no institutional backers or corporate sponsors at this time. Interested in supporting the project? Contact us.",
   },
   {
     question: "What's the timeline?",
@@ -103,13 +94,13 @@ const scienceFaqs = [
       <>
         Neutral hydrogen at the 21-centimeter line (1420.4 MHz) is the first production capability,
         which supports mapping the distribution and rotation of hydrogen gas across the Milky Way.
-        From there the program expands as receivers, backends, aperture, and calibration mature:
+        From there we will work to expand capabilities to include
         solar radio monitoring, continuum observations of bright sources, satellite and spectrum
         identification, then pulsar work, molecular lines, and interferometry. The{" "}
         <Link className={linkClass} href="/science">
           Science &amp; Roadmap
         </Link>{" "}
-        page lists each one with its current status rather than presenting them all as available.
+        page lists each one with its current status.
       </>
     ),
   },
@@ -117,11 +108,10 @@ const scienceFaqs = [
     question: "Why start with the hydrogen line?",
     answer: (
       <>
-        Because it is the rare case where a genuinely important scientific result is reachable with
-        modest equipment. Neutral hydrogen is abundant enough that its 1420 MHz emission is
-        detectable with a small dish, its rest frequency is known precisely, so any measured shift is
+        Because it is a genuinely important scientific target with an accessible detection threshold. Neutral hydrogen is abundant enough that its 1420 MHz emission is
+        detectable with a modest dish, its rest frequency is known precisely, so any measured shift is
         a direct Doppler readout of velocity, and the resulting rotation curve is a real piece of
-        evidence for dark matter rather than a classroom simulation. It is also protected spectrum,
+        evidence for dark matter. It is also protected spectrum,
         which helps. Our{" "}
         <Link className={linkClass} href="/hydrogen-line">
           hydrogen line article
@@ -133,12 +123,12 @@ const scienceFaqs = [
   {
     question: "Where will the observatory be located, and how was the site chosen?",
     answer:
-      "A seven-acre area of family-owned agricultural land in rural, unincorporated Polk County, Florida, held under a right-of-entry agreement while a longer-term lease with a purchase option is negotiated. It was selected for low radio frequency interference, an open horizon, agricultural zoning, and room to add instruments over time. An RFI baseline survey, along with topographic, geotechnical, drainage, utility, lighting, and permitting work, is part of the site characterization ahead of construction.",
+      "A seven-acre area of agricultural land in rural, unincorporated Polk County, Florida. It was selected for low radio frequency interference, an open horizon, agricultural zoning, and room to add instruments over time. An RFI baseline survey, along with topographic, geotechnical, drainage, utility, lighting, and permitting work, is part of the site characterization ahead of construction.",
   },
   {
     question: "How do you deal with radio frequency interference?",
     answer:
-      "It is a design constraint from the start, not a later fix. Each telescope digitizes its own signal locally with a software-defined radio, so only digital data and control traffic travel back to the shelter rather than long analog runs that both lose signal and pick up noise. The backbone is fiber, which carries no current and so neither radiates into the front ends nor gives lightning a conductive path across the site. Telescope nodes run on their own solar and battery supply, keeping mains-conducted noise away from the instruments. Beyond that: physical separation from the equipment shelter, shielding and filtering, an RFI baseline survey of the site, and continuous RFI monitoring with flags recorded alongside the data.",
+      "Various mitigation strategies will be employed. Each telescope digitizes its own signal locally with a software-defined radio, so only digital data and control traffic travel back to the shelter rather than long analog runs that both lose signal and pick up noise. The backbone is fiber, which carries no current and so neither radiates into the front ends nor gives lightning a conductive path across the site. Telescope nodes run on their own solar and battery supply, keeping mains-conducted noise away from the instruments. Beyond that: physical separation from the equipment shelter, shielding and filtering, an RFI baseline survey of the site, and eventually continuous RFI monitoring with flags recorded alongside the data.",
   },
   {
     question: "Won't moving a 10-meter dish be incredibly expensive?",
@@ -149,8 +139,7 @@ const scienceFaqs = [
     question: "Is the data scientifically usable, or is this an educational toy?",
     answer: (
       <>
-        Real measurements from real instruments &mdash; but we would rather tell you the limitation
-        than let you find it. Titan&apos;s data starts as{" "}
+        Real measurements from real instruments &mdash; but we would rather be upfront about limitations. Titan will initially target {" "}
         <strong className="font-semibold text-titan-text-secondary">
           public-engagement grade
         </strong>
@@ -158,7 +147,7 @@ const scienceFaqs = [
         carrying the calibration, provenance, and metadata standards a refereed result requires.
         Moving toward rigorous calibration, documented provenance, and quality control is an explicit
         and continuing objective with its own acceptance tests. We will say plainly when a given
-        instrument and pipeline reach that standard, and we will not claim it before then.
+        instrument and pipeline reach that standard, and we will be clear about it's accuracy until then.
       </>
     ),
   },
@@ -173,10 +162,7 @@ const scienceFaqs = [
       <>
         Yes, that is the whole point. Once an instrument is commissioned for public service you will
         be able to schedule time, point it at a target, collect data, and work through guided
-        analysis. Access is governed by available observing credits and by safety limits enforced in
-        software &mdash; not by credentials, institutional affiliation, or an approved proposal.
-        Finishing the introductory modules earns your first credit, but coursework is never a
-        prerequisite: the advanced planner is open to anyone who wants it. You can create an account
+        analysis. Safety is enforced at the telescope, so you're free to explore the more advanced features from the start. You can create an account
         and try the platform, including simulated observations, at{" "}
         <a
           className={linkClass}
@@ -214,30 +200,6 @@ const involvementFaqs = [
     ),
   },
   {
-    question: "I teach at a university. Can students build something real here?",
-    answer: (
-      <>
-        Yes, and it is a deliberate part of the model rather than a courtesy. Titan is meant to work
-        as an instrumentation and software testbed: mounts, motor control, feeds, receiver chains,
-        calibration systems, telemetry, automation, data pipelines, user interfaces, and analysis
-        tools are all genuine subsystems a capstone team can own. We maintain published interface
-        specifications, safety requirements, review gates, and acceptance testing precisely so that
-        an external project can be accepted into operational service instead of ending as a
-        demonstration. A local off-site workshop for fabrication and integration is part of the
-        longer-term plan.{" "}
-        <Link className={linkClass} href="/contact">
-          Get in touch
-        </Link>{" "}
-        to discuss a project.
-      </>
-    ),
-  },
-  {
-    question: "I teach K-12. Is there anything for classrooms?",
-    answer:
-      "It is planned, and honestly not ready yet. The intent is teacher lesson plans, classroom accounts with student management, standards alignment, downloadable activities, and preconfigured group observations, funded partly through a donated student-hours pool so that cost is not the barrier. Schools anywhere can participate since access is online; Florida relationships are simply our earliest practical partnerships, not a geographic limit. If you would like to help shape this, we would rather hear from you early than hand you a finished thing you cannot use.",
-  },
-  {
     question: "How can I stay updated?",
     answer:
       "Three ways, roughly in order of frequency: join the Discord for day-to-day discussion and announcements, follow the community forum for structured project updates and technical posts, or use the newsletter widget below if you only want to hear about major milestones and fundraising campaigns.",
@@ -262,10 +224,6 @@ export default function FaqPage() {
           <h1 className="text-4xl font-bold text-titan-text-secondary sm:text-5xl">
             Frequently Asked Questions
           </h1>
-          <p className="text-sm leading-7 text-titan-text-primary/90">
-            If something here reads as vague, it is usually because we do not know the answer yet
-            and would rather say so. Anything we have not settled is marked as such.
-          </p>
         </header>
 
         {/* FAQ Sections */}
